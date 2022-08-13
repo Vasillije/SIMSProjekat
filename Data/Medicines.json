@@ -1,0 +1,38 @@
+[
+  {
+    "Id": "p",
+    "Name": "p",
+    "Manufacturer": "p",
+    "Quantity": 6,
+    "IngredientV": {
+      "Name": "antibiotik",
+      "Description": "fffffff"
+    },
+    "IsAccepted": true,
+    "IsDeleted": true
+  },
+  {
+    "Id": "t",
+    "Name": "t",
+    "Manufacturer": "t",
+    "Quantity": 5,
+    "IngredientV": {
+      "Name": "antibiotik",
+      "Description": "fffffff"
+    },
+    "IsAccepted": false,
+    "IsDeleted": true
+  },
+  {
+    "Id": "g",
+    "Name": "g",
+    "Manufacturer": "g",
+    "Quantity": 1,
+    "IngredientV": {
+      "Name": "antibiotik",
+      "Description": "fffffff"
+    },
+    "IsAccepted": false,
+    "IsDeleted": true
+  }
+]

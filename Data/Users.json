@@ -1,0 +1,22 @@
+[
+  {
+    "Jmbg": "p",
+    "Email": "p",
+    "Password": "pp",
+    "Name": "p",
+    "LastName": "p",
+    "PhoneNumber": "p",
+    "TypeUser": 0,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "w",
+    "Email": "w",
+    "Password": "w",
+    "Name": "w",
+    "LastName": "w",
+    "PhoneNumber": "w",
+    "TypeUser": 1,
+    "IsBlocked": false
+  }
+]
