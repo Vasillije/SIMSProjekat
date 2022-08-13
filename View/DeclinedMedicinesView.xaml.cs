@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,13 +22,26 @@ namespace VasilijeSIMS.View
     /// </summary>
     public partial class DeclinedMedicinesView : Window
     {
-        public List<Medicine> medicines = new List<Medicine>();
+        public ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
         public DeclinedMedicinesView()
         {
             InitializeComponent();
-            medicines =new List<Medicine>(medicineRepository.ReadFromFile());
-            MedicineTable.ItemsSource = medicines;
+            medicines =new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
+            MedicineTable.ItemsSource = Check(medicines);
+        }
+
+        public ObservableCollection<Medicine> Check(ObservableCollection<Medicine> medicines)
+        {
+            ObservableCollection<Medicine> declinedMedicines = new ObservableCollection<Medicine>();
+            foreach (Medicine medicine in medicines)
+            {
+                if (medicine.IsAccepted == false)
+                {
+                    declinedMedicines.Add(medicine);
+                }
+            }
+            return declinedMedicines;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vasilije\\Desktop\\SIMS2022\\VasilijeSIMS\\VasilijeSIMS.csproj",
+      "projectUniqueName": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS.csproj",
       "projectName": "VasilijeSIMS",
-      "projectPath": "C:\\Users\\Vasilije\\Desktop\\SIMS2022\\VasilijeSIMS\\VasilijeSIMS.csproj",
+      "projectPath": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS.csproj",
       "packagesPath": "C:\\Users\\Vasilije\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vasilije\\Desktop\\SIMS2022\\VasilijeSIMS\\obj\\",
+      "outputPath": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vasilije\\AppData\\Roaming\\NuGet\\NuGet.Config",
