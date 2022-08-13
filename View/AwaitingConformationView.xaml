@@ -13,7 +13,7 @@
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="*"/>
                 <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}"  Width="*"/>
                 <DataGridTextColumn Header="Quantity"  Binding="{Binding Quantity}"  Width="*"/>
-                <DataGridTextColumn Header="Ingredients" Binding="{Binding IngredientV}" Width="*"/>
+                <DataGridTextColumn Header="Ingredients" Binding="{Binding IngredientV.Name}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>

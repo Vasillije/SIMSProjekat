@@ -9,6 +9,7 @@
       "Description": "fffffff"
     },
     "IsAccepted": true,
+    "WaitingForConfirmation": false,
     "IsDeleted": true
   },
   {
@@ -21,6 +22,7 @@
       "Description": "fffffff"
     },
     "IsAccepted": false,
+    "WaitingForConfirmation": false,
     "IsDeleted": true
   },
   {
@@ -33,6 +35,7 @@
       "Description": "fffffff"
     },
     "IsAccepted": false,
+    "WaitingForConfirmation": true,
     "IsDeleted": true
   }
 ]

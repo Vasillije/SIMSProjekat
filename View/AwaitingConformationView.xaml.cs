@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,15 +22,26 @@ namespace VasilijeSIMS.View
     /// </summary>
     public partial class AwaitingConformationView : Window
     {
-        public List<Medicine> medicines = new List<Medicine>();
+        public ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
         public AwaitingConformationView()
         {
             InitializeComponent();
-            medicines= new List<Medicine>(medicineRepository.ReadFromFile());
-            MedicineTable.ItemsSource = medicines;
+            medicines= new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
+            MedicineTable.ItemsSource = Check(medicines);
         }
-
+        public ObservableCollection<Medicine> Check(ObservableCollection<Medicine> medicines)
+        {
+            ObservableCollection<Medicine> waitingMedicines = new ObservableCollection<Medicine>();
+            foreach (Medicine medicine in medicines)
+            {
+                if (medicine.WaitingForConfirmation == true)
+                {
+                    waitingMedicines.Add(medicine);
+                }
+            }
+            return waitingMedicines;
+        }
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             var s = new MedicineView();

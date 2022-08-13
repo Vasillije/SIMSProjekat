@@ -14,7 +14,7 @@ namespace VasilijeSIMS.Model
         public int Quantity { get; set; }
         public Ingredient IngredientV { get; set; }
         public Boolean IsAccepted { get; set; }
-      //  public Boolean WaitingForConfirmation { get; set; }
+        public Boolean WaitingForConfirmation { get; set; }
         public Boolean IsDeleted { get; set; }
     }
 }
