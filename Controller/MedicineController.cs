@@ -18,5 +18,9 @@ namespace VasilijeSIMS.Controller
         {
             return medicineService.DeleteMedicine(medicine);
         }
+        public bool CreateMedicine(Medicine user)
+        {
+            return medicineService.CreateMedicine(user);
+        }
     }
 }

@@ -50,7 +50,8 @@ namespace VasilijeSIMS.View
             s.Show();
             Close();
         }
-        private void Search(object sender, TextChangedEventArgs e)
+
+        private void Search_Click(object sender, RoutedEventArgs e)
         {
             medicines.Clear();
             ObservableCollection<Medicine> help;
@@ -60,15 +61,13 @@ namespace VasilijeSIMS.View
         private void Create_Click(object sender, RoutedEventArgs e)
         {
             var s = new AddMedicineView();
-            s.Show();
-            Close();
+            s.Show();          
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             var s = new UpdateMedicineView();
-            s.Show();
-            Close();
+            s.Show();        
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -101,13 +100,5 @@ namespace VasilijeSIMS.View
             Close();
         }
 
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-            medicines.Clear();
-            ObservableCollection<Medicine> help;
-            help = new ObservableCollection<Medicine>(medicineRepository.Search(searchBox.Text));
-            MedicineTable.ItemsSource = help;
-
-        }
     }
 }

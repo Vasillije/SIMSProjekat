@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,6 +68,7 @@ namespace VasilijeSIMS.View
             }
         }
 
+       
         private void Block_Click(object sender, RoutedEventArgs e)
         {
             if (UsersTable.SelectedIndex != -1)
@@ -96,6 +98,14 @@ namespace VasilijeSIMS.View
                     MessageBox.Show("user unblocked");
                 }
             }
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            users.Clear();
+            ObservableCollection<User> help;
+            help = new ObservableCollection<User>(userRepository.Search(searchBox.Text));
+            UsersTable.ItemsSource = help;
         }
     }
 }

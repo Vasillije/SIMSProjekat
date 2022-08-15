@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
 
@@ -26,5 +27,22 @@ namespace VasilijeSIMS.Service
             }
         return false;
         }
+        public bool CreateMedicine(Medicine newM)
+        {
+            List<Medicine> medicines = new List<Medicine>();
+            medicines = medicineRepository.ReadFromFile();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Id.Equals(newM.Id) && i.IngredientV.Name.Equals(newM.IngredientV.Name))
+                {
+                    MessageBox.Show("This medicine already exists");
+                    return false;
+                }
+            }
+            medicines.Add(newM);
+            medicineRepository.LoadIntoFile(medicines);
+            return true;
+        }
+
     }
 }

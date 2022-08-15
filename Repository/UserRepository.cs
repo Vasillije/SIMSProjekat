@@ -46,5 +46,20 @@ namespace VasilijeSIMS.Repository
             jWriter.Close();
             writer.Close();
         }
+
+        public List<User> Search (string search)
+        {
+            string tekst = search.ToLower();
+            List<User> users = ReadFromFile();
+            List<User> foundUsers = new List<User>();
+            foreach (User user in users)
+            {
+                if(user.Jmbg.ToLower().Contains(tekst) || user.Email.ToLower().Contains(tekst) || user.Name.ToLower().Contains(tekst) || user.LastName.ToLower().Contains(tekst) || user.PhoneNumber.ToLower().Contains(tekst))
+                {
+                    foundUsers.Add(user);
+                }
+            }
+        return foundUsers;
+        }
     }
 }

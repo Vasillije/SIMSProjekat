@@ -10,5 +10,11 @@ namespace VasilijeSIMS.Model
     {
         public string Name { get; set; } //jedinstveno
         public string Description { get; set; }
+
+        public Ingredient(string name, string description)
+        {
+            Name = name;
+            Description = description;
+        }
     }
 }

@@ -18,12 +18,13 @@
                 <DataGridTextColumn Header="User type" Width="*" Binding="{Binding TypeUser}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox HorizontalAlignment="Left" Margin="577,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="483,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button Content="Create user" HorizontalAlignment="Left" Margin="15,380,0,0" VerticalAlignment="Top" Width="102" Click="CreateUserClick"/>
         <Button Content="Update user" HorizontalAlignment="Left" Margin="337,380,0,0" VerticalAlignment="Top" Width="102" Click="Update_Click"/>
         <Button Content="Delete user" HorizontalAlignment="Left" Margin="665,380,0,0" VerticalAlignment="Top" Width="102" Click="Delete_Click"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>
         <Button Content="Block selected user" HorizontalAlignment="Left" Margin="8,30,0,0" VerticalAlignment="Top" Width="124" Click="Block_Click"/>
         <Button Content="Unblock selected user" HorizontalAlignment="Left" Margin="161,30,0,0" VerticalAlignment="Top" Width="124" Click="Unblock_Click"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="629,30,0,0" VerticalAlignment="Top" Width="64" Click="Search_Click"/>
     </Grid>
 </Window>

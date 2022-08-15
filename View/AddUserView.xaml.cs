@@ -45,10 +45,6 @@ namespace VasilijeSIMS.View
                 User newUser = new User(jmbg.Text, email.Text, password.Text, name.Text, surname.Text, phone.Text, (Enums.UserType)cbUserType.SelectedIndex);
                 userController.CreateUser(newUser);
             }
-            //else
-            //{
-            //    MessageBox.Show("fill in fields again");
-            //}
             Close();
         }
 
