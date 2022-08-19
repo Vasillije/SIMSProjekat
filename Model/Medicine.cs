@@ -23,8 +23,9 @@ namespace VasilijeSIMS.Model
         public Boolean IsAccepted { get; set; }
         public Boolean WaitingForConfirmation { get; set; }
         public Boolean IsDeleted { get; set; }
+        public string ReasonForRejection { get; set; }
 
-        public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc)
+        public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, string reasonForRejection)
         {
             Id = id;
             Name = name;
@@ -34,9 +35,12 @@ namespace VasilijeSIMS.Model
             IsAccepted = false;
             WaitingForConfirmation = true;
             IsDeleted = false;
+            ReasonForRejection = reasonForRejection;
         }
 
-       
+        public Medicine()
+        {
+        }
     }
 
 }

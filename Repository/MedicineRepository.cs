@@ -44,6 +44,8 @@ namespace VasilijeSIMS.Repository
             jWriter.Close();
             writer.Close();
         }
+
+      
         public List<Medicine> Search(string search)
         {
             string tekst = search.ToLower();

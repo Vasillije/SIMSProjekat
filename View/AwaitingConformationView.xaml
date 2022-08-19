@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AwaitingConformationView" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="MedicineTable" Margin="5,68,35,75" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding medicines}"  >
+        <DataGrid x:Name="AwaitingMedicineTable" Margin="37,68,35,75" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding medicines}"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id"  Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="*"/>
@@ -17,6 +17,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>
+        <Button Content="Decline" Click="Decline_Click" HorizontalAlignment="Left" Margin="652,393,0,0" VerticalAlignment="Top"/>
+        <Button Content="Confirm " HorizontalAlignment="Left" Margin="711,392,0,0" VerticalAlignment="Top" Click="Confirm_Click"/>
 
     </Grid>
 </Window>

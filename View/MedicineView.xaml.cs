@@ -83,7 +83,7 @@ namespace VasilijeSIMS.View
         {
             var s = new AwaitingConformationView();
             s.Show();
-            Close();
+           
         }
 
         private void Declined_Medicines_Click(object sender, RoutedEventArgs e)
@@ -97,8 +97,14 @@ namespace VasilijeSIMS.View
         {
             var s = new ProcurementOfMedicinesView();
             s.Show();
-            Close();
+           
         }
 
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            MedicineTable.ItemsSource = null;
+            medicines = new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
+            MedicineTable.ItemsSource = Check(medicines);
+        }
     }
 }

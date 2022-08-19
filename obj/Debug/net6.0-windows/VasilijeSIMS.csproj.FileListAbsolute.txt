@@ -84,3 +84,5 @@ C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\
 C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\VasilijeSIMS.pdb
 C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\VasilijeSIMS.genruntimeconfig.cache
 C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\ref\VasilijeSIMS.dll
+C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\View\DeclineMedicine.g.cs
+C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\View\DeclineMedicine.baml

@@ -26,5 +26,6 @@
         <Button Content="Procurement of medicines" HorizontalAlignment="Left" Margin="333,30,0,0" VerticalAlignment="Top" Width="147" Click="Procurement_Of_Medicines_Click"/>
         <Button Content="Search" HorizontalAlignment="Left" Margin="649,30,0,0" VerticalAlignment="Top" Width="70" Click="Search_Click"/>
         <Label Content="Confirmed medicines" HorizontalAlignment="Left" Margin="325,59,0,0" VerticalAlignment="Top"/>
+        <Button Click="Refresh_Click"  Content="Refresh table" HorizontalAlignment="Left" Margin="9,57,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

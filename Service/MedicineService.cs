@@ -27,6 +27,16 @@ namespace VasilijeSIMS.Service
             }
         return false;
         }
+        public Medicine? FindById(String id)
+        {
+            List<Medicine> medicines = medicineRepository.ReadFromFile();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Id == id)
+                    return i;
+            }
+            return null;
+        }
         public bool CreateMedicine(Medicine newM)
         {
             List<Medicine> medicines = new List<Medicine>();
@@ -42,6 +52,21 @@ namespace VasilijeSIMS.Service
             medicines.Add(newM);
             medicineRepository.LoadIntoFile(medicines);
             return true;
+        }
+        public bool UpdateMedicine(Medicine medicine, Medicine newMedicine)
+        {
+            List<Medicine> medicines = medicineRepository.ReadFromFile();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Id.Equals(medicine.Id))
+                {
+                    medicines.Remove(i);
+                    medicines.Add(newMedicine);
+                    medicineRepository.LoadIntoFile(medicines);
+                    return true;
+                }
+            }
+            return false;
         }
 
     }

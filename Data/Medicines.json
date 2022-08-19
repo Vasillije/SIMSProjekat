@@ -8,9 +8,10 @@
       "Name": "antibiotik",
       "Description": "fffffff"
     },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": true,
+    "ReasonForRejection": "dadasd"
   },
   {
     "Id": "t",
@@ -22,21 +23,9 @@
       "Description": "fffffff"
     },
     "IsAccepted": false,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true
-  },
-  {
-    "Id": "g",
-    "Name": "g",
-    "Manufacturer": "g",
-    "Quantity": 1,
-    "IngredientV": {
-      "Name": "antibiotik",
-      "Description": "fffffff"
-    },
-    "IsAccepted": false,
     "WaitingForConfirmation": true,
-    "IsDeleted": true
+    "IsDeleted": true,
+    "ReasonForRejection": "dadasd"
   },
   {
     "Id": "1234br",
@@ -47,9 +36,52 @@
       "Name": "ibuprofen",
       "Description": "analgetik"
     },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "p123",
+    "Name": "palitreks",
+    "Manufacturer": "galenika",
+    "Quantity": 4,
+    "IngredientV": {
+      "Name": "palitreks",
+      "Description": "antibiotik"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "g",
+    "Name": "g",
+    "Manufacturer": "g",
+    "Quantity": 1,
+    "IngredientV": {
+      "Name": "antibiotik",
+      "Description": "fffffff"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "ReasonForRejection": "hbb"
+  },
+  {
+    "Id": "56764ed",
+    "Name": "probiotik",
+    "Manufacturer": "galenika",
+    "Quantity": 76,
+    "IngredientV": {
+      "Name": "bulardi",
+      "Description": "uz antibiotik"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "ReasonForRejection": ""
   },
   {
     "Id": "12345",
@@ -60,21 +92,9 @@
       "Name": "acetilsalicil",
       "Description": "analgetik"
     },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false
-  },
-  {
-    "Id": "2345p",
-    "Name": "pantenol",
-    "Manufacturer": "galenika",
-    "Quantity": 18,
-    "IngredientV": {
-      "Name": "pantenol",
-      "Description": "krema"
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "ReasonForRejection": "sjd"
   }
 ]

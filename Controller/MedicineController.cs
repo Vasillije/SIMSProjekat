@@ -22,5 +22,13 @@ namespace VasilijeSIMS.Controller
         {
             return medicineService.CreateMedicine(user);
         }
+        public Medicine FindById(String id)
+        {
+            return medicineService.FindById(id);
+        }
+        public bool UpdateMedicine(Medicine medicine, Medicine newMedicine)
+        {
+            return medicineService.UpdateMedicine( medicine,  newMedicine);
+        }
     }
 }

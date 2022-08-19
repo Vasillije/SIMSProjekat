@@ -60,9 +60,9 @@ namespace VasilijeSIMS.View
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            if (validation() == true && quantityValidation()==true)
+            if (validation() == true /*&& quantityValidation()==true*/)
             {
-                Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse( quantity.Text), ingredientName.Text, description.Text );
+                Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse( quantity.Text), ingredientName.Text, description.Text,"");
                 medicineController.CreateMedicine(newMedicine);
             }
             Close();

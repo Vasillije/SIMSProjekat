@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VasilijeSIMS.Controller;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
 
@@ -24,11 +25,14 @@ namespace VasilijeSIMS.View
     {
         public ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
+        public MedicineController medicineController = new MedicineController();
+        Medicine CurrentMedicine;
+        Medicine NewMedicine;
         public AwaitingConformationView()
         {
             InitializeComponent();
             medicines= new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
-            MedicineTable.ItemsSource = Check(medicines);
+            AwaitingMedicineTable.ItemsSource = Check(medicines);
         }
         public ObservableCollection<Medicine> Check(ObservableCollection<Medicine> medicines)
         {
@@ -47,6 +51,30 @@ namespace VasilijeSIMS.View
             var s = new MedicineView();
             s.Show();
             Close();
+        }
+
+        private void Decline_Click(object sender, RoutedEventArgs e)
+        {
+            if (AwaitingMedicineTable.SelectedIndex != -1)
+            {   
+                var s = new DeclineMedicine((Medicine)AwaitingMedicineTable.SelectedItem);
+                s.Show();
+                Close();
+            }
+        }
+
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            if (AwaitingMedicineTable.SelectedIndex != -1)
+            {
+                CurrentMedicine = (Medicine)AwaitingMedicineTable.SelectedItem;
+                NewMedicine = CurrentMedicine;
+                NewMedicine.WaitingForConfirmation = false;
+                NewMedicine.IsAccepted = true;
+                medicineController.UpdateMedicine(CurrentMedicine, NewMedicine);
+
+                Close();
+            }
         }
     }
 }
