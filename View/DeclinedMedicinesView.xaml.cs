@@ -12,8 +12,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VasilijeSIMS.Controller;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
+using VasilijeSIMS.Service;
 
 namespace VasilijeSIMS.View
 {
@@ -24,6 +26,7 @@ namespace VasilijeSIMS.View
     {
         public ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
+        public MedicineController medicineController = new MedicineController();
         public DeclinedMedicinesView()
         {
             InitializeComponent();
@@ -36,7 +39,7 @@ namespace VasilijeSIMS.View
             ObservableCollection<Medicine> declinedMedicines = new ObservableCollection<Medicine>();
             foreach (Medicine medicine in medicines)
             {
-                if (medicine.IsAccepted == false)
+                if (medicine.WaitingForConfirmation == false && medicine.IsAccepted == false && medicine.IsDeleted == true)
                 {
                     declinedMedicines.Add(medicine);
                 }
@@ -46,9 +49,17 @@ namespace VasilijeSIMS.View
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new MedicineView();
-            s.Show();
-            Close();
+           Close();
+        }
+
+        private void Correct_Click(object sender, RoutedEventArgs e)
+        {
+            if (MedicineTable.SelectedIndex != -1)
+            {
+                var s = new UpdateMedicineView((Medicine)MedicineTable.SelectedItem);
+                s.Show();
+                
+            }
         }
     }
 }

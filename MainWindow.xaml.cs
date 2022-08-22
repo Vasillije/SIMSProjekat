@@ -25,7 +25,7 @@ namespace VasilijeSIMS
     public partial class MainWindow : Window
     {
         private UserRepository userRepository = new UserRepository();
-
+        int brojac=0;
         public MainWindow()
         {
             InitializeComponent();
@@ -60,7 +60,8 @@ namespace VasilijeSIMS
                 }
                 else 
                 { 
-                    postoji = false; 
+                    postoji = false;
+                   
                 }
             }
 
@@ -70,9 +71,15 @@ namespace VasilijeSIMS
                 s.Show();
                 Close();
             }
-            else if (postoji == false) 
+            else if (brojac >=2)
             {
-               MessageBox.Show("invalid username or password");
+                Close();
+                MessageBox.Show("You tried 3 times");
+            }
+            else if (postoji == false)
+            {
+                brojac++;
+                MessageBox.Show("invalid username or password");
             }
             else if (blokiran == true)
             {

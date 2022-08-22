@@ -10,21 +10,7 @@
     },
     "IsAccepted": false,
     "WaitingForConfirmation": true,
-    "IsDeleted": true,
-    "ReasonForRejection": "dadasd"
-  },
-  {
-    "Id": "t",
-    "Name": "t",
-    "Manufacturer": "t",
-    "Quantity": 5,
-    "IngredientV": {
-      "Name": "antibiotik",
-      "Description": "fffffff"
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": true,
+    "IsDeleted": false,
     "ReasonForRejection": "dadasd"
   },
   {
@@ -96,5 +82,47 @@
     "WaitingForConfirmation": false,
     "IsDeleted": false,
     "ReasonForRejection": "sjd"
+  },
+  {
+    "Id": "s",
+    "Name": "s",
+    "Manufacturer": "ssgsgs",
+    "Quantity": 2,
+    "IngredientV": {
+      "Name": "s",
+      "Description": "s"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "ReasonForRejection": "iwstekao"
+  },
+  {
+    "Id": "ttt",
+    "Name": "trt",
+    "Manufacturer": "t",
+    "Quantity": 5,
+    "IngredientV": {
+      "Name": "antibiotik",
+      "Description": "fffffff"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "ReasonForRejection": "dadasd"
+  },
+  {
+    "Id": "jf",
+    "Name": "sfsjhjhjhjhjhjh",
+    "Manufacturer": "ddd",
+    "Quantity": 3,
+    "IngredientV": {
+      "Name": "ddd",
+      "Description": "ddddd"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "ReasonForRejection": "kjjkdhjkghkdhkgjd"
   }
 ]

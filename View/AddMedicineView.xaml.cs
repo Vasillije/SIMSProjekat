@@ -53,8 +53,6 @@ namespace VasilijeSIMS.View
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new MedicineView();
-            s.Show();
             Close();
         }
 
@@ -62,7 +60,7 @@ namespace VasilijeSIMS.View
         {
             if (validation() == true /*&& quantityValidation()==true*/)
             {
-                Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse( quantity.Text), ingredientName.Text, description.Text,"");
+                Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse( quantity.Text), ingredientName.Text, description.Text);
                 medicineController.CreateMedicine(newMedicine);
             }
             Close();

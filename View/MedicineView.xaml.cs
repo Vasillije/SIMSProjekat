@@ -38,7 +38,7 @@ namespace VasilijeSIMS.View
         {
             ObservableCollection<Medicine> AcceptedMedicines = new ObservableCollection<Medicine>();
             foreach (Medicine medicine in medicineList)
-                if (medicine.IsAccepted == true)
+                if ((medicine.WaitingForConfirmation == false) && (medicine.IsAccepted == true) && (medicine.IsDeleted == false))
                 {
                     AcceptedMedicines.Add(medicine);
                 }
@@ -66,8 +66,11 @@ namespace VasilijeSIMS.View
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            var s = new UpdateMedicineView();
-            s.Show();        
+            if (MedicineTable.SelectedIndex != -1)
+            {
+                var s = new UpdateMedicineView((Medicine)MedicineTable.SelectedItem);
+                s.Show();
+            }
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -90,7 +93,7 @@ namespace VasilijeSIMS.View
         {
             var s = new DeclinedMedicinesView();
             s.Show();
-            Close();
+          
         }
 
         private void Procurement_Of_Medicines_Click(object sender, RoutedEventArgs e)

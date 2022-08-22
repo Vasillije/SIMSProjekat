@@ -38,6 +38,7 @@ namespace VasilijeSIMS.View
             NewMedicine.ReasonForRejection = ReasonToDecline.Text;
             NewMedicine.WaitingForConfirmation = false;
             NewMedicine.IsAccepted = false;
+            NewMedicine.IsDeleted = true;
             medicineController.UpdateMedicine(CurrentMedicine, NewMedicine);
             Close();
         }

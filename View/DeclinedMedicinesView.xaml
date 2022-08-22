@@ -17,6 +17,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>
+        <Button Name="correctData" Click="Correct_Click" Content="Correct data" HorizontalAlignment="Left" Margin="671,369,0,0" VerticalAlignment="Top" Width="96"/>
 
     </Grid>
 </Window>

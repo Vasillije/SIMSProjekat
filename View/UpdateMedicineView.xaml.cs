@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VasilijeSIMS.Controller;
+using VasilijeSIMS.Model;
 
 namespace VasilijeSIMS.View
 {
@@ -19,21 +21,47 @@ namespace VasilijeSIMS.View
     /// </summary>
     public partial class UpdateMedicineView : Window
     {
-        public UpdateMedicineView()
+        MedicineController medicineController = new MedicineController();
+        Medicine oldMedicine = new Medicine();
+        public UpdateMedicineView(Medicine medicine)
         {
             InitializeComponent();
+            oldMedicine = medicine;
+            id.Text=medicine.Id;
+            name.Text = medicine.Name;
+            manufacturer.Text = medicine.Manufacturer;
+            quantity.Text = medicine.Quantity.ToString();
+            ingredients.Text = medicine.IngredientV.Name;
+            ingredients_description.Text = medicine.IngredientV.Description;
+            if (medicine.IsAccepted)
+                yes1.IsChecked = true;
+            else
+                no1.IsChecked = true;
+
+            if (medicine.IsDeleted)
+                yes2.IsChecked = true;
+            else
+                no2.IsChecked = true;
+
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var  s = new MedicineView();
-            s.Show();
             Close();
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
+            Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse(quantity.Text), ingredients.Text, ingredients_description.Text, oldMedicine.IsAccepted,oldMedicine.WaitingForConfirmation, oldMedicine.IsDeleted, oldMedicine.ReasonForRejection);
+            if (newMedicine.IsAccepted ==false && newMedicine.IsDeleted==true && newMedicine.WaitingForConfirmation == false )
+            {
+                newMedicine.WaitingForConfirmation= true;
+                newMedicine.IsDeleted = false;
 
+            }
+            medicineController.UpdateMedicine(oldMedicine, newMedicine);
+            MessageBox.Show("medicine successfully changed");
+            Close();
         }
     }
 }

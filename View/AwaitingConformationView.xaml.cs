@@ -39,7 +39,7 @@ namespace VasilijeSIMS.View
             ObservableCollection<Medicine> waitingMedicines = new ObservableCollection<Medicine>();
             foreach (Medicine medicine in medicines)
             {
-                if (medicine.WaitingForConfirmation == true)
+                if (medicine.WaitingForConfirmation == true && medicine.IsAccepted==false && medicine.IsDeleted==false )
                 {
                     waitingMedicines.Add(medicine);
                 }
@@ -71,6 +71,7 @@ namespace VasilijeSIMS.View
                 NewMedicine = CurrentMedicine;
                 NewMedicine.WaitingForConfirmation = false;
                 NewMedicine.IsAccepted = true;
+                NewMedicine.IsDeleted = false;
                 medicineController.UpdateMedicine(CurrentMedicine, NewMedicine);
 
                 Close();
