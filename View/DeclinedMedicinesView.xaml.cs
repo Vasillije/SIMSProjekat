@@ -57,9 +57,16 @@ namespace VasilijeSIMS.View
             if (MedicineTable.SelectedIndex != -1)
             {
                 var s = new UpdateMedicineView((Medicine)MedicineTable.SelectedItem);
-                s.Show();
-                
+                s.Show();   
             }
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineRepository.SearchDeclined(searchBox.Text));
+            MedicineTable.ItemsSource = help;
         }
     }
 }

@@ -1,19 +1,5 @@
 [
   {
-    "Id": "p",
-    "Name": "p",
-    "Manufacturer": "p",
-    "Quantity": 6,
-    "IngredientV": {
-      "Name": "antibiotik",
-      "Description": "fffffff"
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false,
-    "ReasonForRejection": "dadasd"
-  },
-  {
     "Id": "1234br",
     "Name": "brufen",
     "Manufacturer": "galenika",
@@ -124,5 +110,19 @@
     "WaitingForConfirmation": false,
     "IsDeleted": false,
     "ReasonForRejection": "kjjkdhjkghkdhkgjd"
+  },
+  {
+    "Id": "p",
+    "Name": "p",
+    "Manufacturer": "p",
+    "Quantity": 6,
+    "IngredientV": {
+      "Name": "antibiotik",
+      "Description": "fffffff"
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "ReasonForRejection": "dadasd"
   }
 ]

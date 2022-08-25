@@ -24,13 +24,22 @@ namespace VasilijeSIMS
     /// </summary>
     public partial class MainWindow : Window
     {
-        private UserRepository userRepository = new UserRepository();
+        public UserRepository userRepository = new UserRepository();
+
+
+        private static User LoggedUser = new User();
+
+
         int brojac=0;
         public MainWindow()
         {
             InitializeComponent();
         }
-        
+        public static User showUser()
+        {
+            MessageBox.Show(LoggedUser.Name);
+            return LoggedUser;
+        }
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             List<User> users = userRepository.ReadFromFile();
@@ -56,17 +65,20 @@ namespace VasilijeSIMS
                         blokiran = false;
                     }
                     postoji = true;
+                    LoggedUser = user;
+                    showUser();
+                    
                     break; 
                 }
                 else 
                 { 
                     postoji = false;
-                   
                 }
             }
 
             if (postoji == true && blokiran==false)
             {
+               
                 var s = new homepage();
                 s.Show();
                 Close();

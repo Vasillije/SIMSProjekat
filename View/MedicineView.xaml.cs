@@ -27,13 +27,35 @@ namespace VasilijeSIMS.View
         public ObservableCollection<Medicine> ConfirmedMedicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
         public MedicineController medicineController = new MedicineController();
+        
+        public User loggedUser = new User();
         public MedicineView()
         {
             InitializeComponent();
             medicines = new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
             MedicineTable.ItemsSource = Check (medicines);
+            whoIsLogged();
         }
 
+        private void whoIsLogged()
+        {
+             loggedUser = MainWindow.showUser();
+            switch (loggedUser.TypeUser)
+            {
+                case Enums.UserType.Pharmacist:
+                    MessageBox.Show("f");
+
+                    break;
+                case Enums.UserType.Doctor:
+                    MessageBox.Show("doc");
+                    break;
+                case Enums.UserType.Director:
+                    MessageBox.Show("direktor");
+                    AwaitingConfirmation.IsEnabled = false;
+                    break;
+            }
+
+            }
         private ObservableCollection<Medicine> Check(ObservableCollection<Medicine> medicineList)
         {
             ObservableCollection<Medicine> AcceptedMedicines = new ObservableCollection<Medicine>();
@@ -55,7 +77,7 @@ namespace VasilijeSIMS.View
         {
             medicines.Clear();
             ObservableCollection<Medicine> help;
-            help = new ObservableCollection<Medicine>(medicineRepository.Search(searchBox.Text));
+            help = new ObservableCollection<Medicine>(medicineRepository.SearchAccepted(searchBox.Text));
             MedicineTable.ItemsSource = help;
         }
         private void Create_Click(object sender, RoutedEventArgs e)

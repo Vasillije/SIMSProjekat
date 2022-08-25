@@ -37,8 +37,8 @@ namespace VasilijeSIMS.View
             }
             return true;
         }
-
-        private void ConfirmClick(object sender, RoutedEventArgs e)
+      
+            private void ConfirmClick(object sender, RoutedEventArgs e)
         {   
             if (validation() == true)
             {

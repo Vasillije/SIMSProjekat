@@ -21,9 +21,14 @@ namespace VasilijeSIMS.Service
             {
                 if (i.Jmbg.Equals(newUser.Jmbg))
                 {
-                    MessageBox.Show("This user already exists");
+                    MessageBox.Show("User with this jmbg already exists");
                     return false;
 
+                }
+                else if (i.Email.Equals(newUser.Email))
+                {
+                    MessageBox.Show("User with this email already exists");
+                    return false;
                 }
             }
             users.Add(newUser);

@@ -10,6 +10,36 @@
     "IsBlocked": false
   },
   {
+    "Jmbg": "u",
+    "Email": "u",
+    "Password": "u",
+    "Name": "u",
+    "LastName": "u",
+    "PhoneNumber": "u",
+    "TypeUser": 2,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "p1",
+    "Email": "pharmacist1@gmail.com",
+    "Password": "pharmacist1",
+    "Name": "pharmacist1",
+    "LastName": "pharmacist1",
+    "PhoneNumber": "+38161",
+    "TypeUser": 0,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "d1",
+    "Email": "doctor1@gmail.com",
+    "Password": "doctor1",
+    "Name": "doctor1",
+    "LastName": "doctor1",
+    "PhoneNumber": "+38161",
+    "TypeUser": 1,
+    "IsBlocked": false
+  },
+  {
     "Jmbg": "w",
     "Email": "w",
     "Password": "w",
@@ -17,6 +47,36 @@
     "LastName": "w",
     "PhoneNumber": "w",
     "TypeUser": 1,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "u1",
+    "Email": "upravnik1@gmail.com",
+    "Password": "upravnik1",
+    "Name": "upravnik1",
+    "LastName": "upravnik1",
+    "PhoneNumber": "+38161",
+    "TypeUser": 2,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "u2",
+    "Email": "upravnik2@gmail.com",
+    "Password": "upravnik2",
+    "Name": "upravnik2",
+    "LastName": "upravnik2",
+    "PhoneNumber": "+38162",
+    "TypeUser": 2,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "89098790",
+    "Email": "uu",
+    "Password": "h",
+    "Name": "hggggg",
+    "LastName": "hhhh",
+    "PhoneNumber": "hhhh",
+    "TypeUser": 0,
     "IsBlocked": false
   }
 ]

@@ -23,6 +23,7 @@ namespace VasilijeSIMS.View
     /// </summary>
     public partial class UserView : Window
     {
+        
         public List<User> users = new List<User>();
         public UserRepository userRepository = new UserRepository();
         public UserController userController = new UserController();
@@ -32,6 +33,19 @@ namespace VasilijeSIMS.View
             InitializeComponent();
             users = new List<User>(userRepository.ReadFromFile());
             UsersTable.ItemsSource = users;
+        }
+
+        public bool LoggedUser (User user)
+        {
+            if (user.TypeUser == 0)
+            {
+                create.IsEnabled = false;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void CreateUserClick(object sender, RoutedEventArgs e)

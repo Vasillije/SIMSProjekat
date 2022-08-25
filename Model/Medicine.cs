@@ -19,6 +19,7 @@ namespace VasilijeSIMS.Model
         public string Name { get; set; }
         public string Manufacturer { get; set; }
         public int Quantity { get; set; }
+        //public IDictionary<int, Ingredient> IngredientV { get; set; }
         public Ingredient IngredientV { get; set; }
         public Boolean IsAccepted { get; set; }
         public Boolean WaitingForConfirmation { get; set; }
@@ -32,6 +33,7 @@ namespace VasilijeSIMS.Model
             Name = name;
             Manufacturer = manufacturer;
             Quantity = quantity;
+            //IngredientV = new Dictionary<int, Ingredient>();
             IngredientV = new Ingredient(iname, idesc);
             IsAccepted = false;
             WaitingForConfirmation = true;
@@ -44,6 +46,7 @@ namespace VasilijeSIMS.Model
             Name = name;
             Manufacturer = manufacturer;
             Quantity = quantity;
+            //IngredientV =new Dictionary<int, Ingredient>();
             IngredientV = new Ingredient(iname, idesc);
             IsAccepted = isAccepted;
             WaitingForConfirmation = WFC;
