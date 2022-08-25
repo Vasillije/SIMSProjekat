@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using VasilijeSIMS.Controller;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
+using VasilijeSIMS.Service;
 
 namespace VasilijeSIMS.View
 {
@@ -27,6 +28,7 @@ namespace VasilijeSIMS.View
         public ObservableCollection<Medicine> ConfirmedMedicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
         public MedicineController medicineController = new MedicineController();
+        public MedicineService medicineService = new MedicineService();
         
         public User loggedUser = new User();
         public MedicineView()
@@ -43,14 +45,10 @@ namespace VasilijeSIMS.View
             switch (loggedUser.TypeUser)
             {
                 case Enums.UserType.Pharmacist:
-                    MessageBox.Show("f");
-
                     break;
                 case Enums.UserType.Doctor:
-                    MessageBox.Show("doc");
                     break;
                 case Enums.UserType.Director:
-                    MessageBox.Show("direktor");
                     AwaitingConfirmation.IsEnabled = false;
                     break;
             }
@@ -77,7 +75,7 @@ namespace VasilijeSIMS.View
         {
             medicines.Clear();
             ObservableCollection<Medicine> help;
-            help = new ObservableCollection<Medicine>(medicineRepository.SearchAccepted(searchBox.Text));
+            help = new ObservableCollection<Medicine>(medicineService.SearchAccepted(searchBox.Text));
             MedicineTable.ItemsSource = help;
         }
         private void Create_Click(object sender, RoutedEventArgs e)

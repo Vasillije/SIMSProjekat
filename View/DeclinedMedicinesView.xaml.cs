@@ -27,6 +27,7 @@ namespace VasilijeSIMS.View
         public ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
         public MedicineController medicineController = new MedicineController();
+        public MedicineService medicineService = new MedicineService();
         public DeclinedMedicinesView()
         {
             InitializeComponent();
@@ -51,7 +52,16 @@ namespace VasilijeSIMS.View
         {
            Close();
         }
-
+        private void ShowRejection(object sender, RoutedEventArgs e)
+        {
+            if (MedicineTable.SelectedIndex != -1)
+            {
+            var s = new RejectionReason((Medicine)MedicineTable.SelectedItem);
+            s.Show();
+              
+                Close();
+            }
+        }
         private void Correct_Click(object sender, RoutedEventArgs e)
         {
             if (MedicineTable.SelectedIndex != -1)
@@ -65,8 +75,13 @@ namespace VasilijeSIMS.View
         {
             medicines.Clear();
             ObservableCollection<Medicine> help;
-            help = new ObservableCollection<Medicine>(medicineRepository.SearchDeclined(searchBox.Text));
+            help = new ObservableCollection<Medicine>(medicineService.SearchDeclined(searchBox.Text));
             MedicineTable.ItemsSource = help;
+        }
+
+        private void MedicineTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

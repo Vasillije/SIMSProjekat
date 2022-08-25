@@ -48,8 +48,6 @@ namespace VasilijeSIMS.View
         }
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new MedicineView();
-            s.Show();
             Close();
         }
 

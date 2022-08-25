@@ -8,13 +8,6 @@ namespace VasilijeSIMS.Model
 {
     public class Medicine
     {
-        private string text1;
-        private string text2;
-        private string text3;
-        private string text4;
-        private string text5;
-        private string text6;
-
         public string Id { get; set; } //jedinstveno - sifra
         public string Name { get; set; }
         public string Manufacturer { get; set; }
@@ -24,7 +17,8 @@ namespace VasilijeSIMS.Model
         public Boolean IsAccepted { get; set; }
         public Boolean WaitingForConfirmation { get; set; }
         public Boolean IsDeleted { get; set; }
-       
+        public User DeclinedBy { get; set; }
+
         public string ReasonForRejection { get; set; }
 
         public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc)
@@ -39,6 +33,7 @@ namespace VasilijeSIMS.Model
             WaitingForConfirmation = true;
             IsDeleted = false;
             ReasonForRejection = "";
+            DeclinedBy = null;
         }
         public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC,Boolean isDeleted, string reasonForRejection)
         {
@@ -52,6 +47,21 @@ namespace VasilijeSIMS.Model
             WaitingForConfirmation = WFC;
             IsDeleted = isDeleted;
             ReasonForRejection = reasonForRejection;
+            DeclinedBy = null;
+        }
+        public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC, Boolean isDeleted, string reasonForRejection, User user)
+        {
+            Id = id;
+            Name = name;
+            Manufacturer = manufacturer;
+            Quantity = quantity;
+            //IngredientV =new Dictionary<int, Ingredient>();
+            IngredientV = new Ingredient(iname, idesc);
+            IsAccepted = isAccepted;
+            WaitingForConfirmation = WFC;
+            IsDeleted = isDeleted;
+            ReasonForRejection = reasonForRejection;
+            DeclinedBy = user;
         }
 
         public Medicine()

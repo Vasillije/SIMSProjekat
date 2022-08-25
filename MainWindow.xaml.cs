@@ -37,7 +37,6 @@ namespace VasilijeSIMS
         }
         public static User showUser()
         {
-            MessageBox.Show(LoggedUser.Name);
             return LoggedUser;
         }
         private void Confirm_Click(object sender, RoutedEventArgs e)

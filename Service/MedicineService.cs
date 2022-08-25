@@ -27,6 +27,7 @@ namespace VasilijeSIMS.Service
             }
         return false;
         }
+       
         public Medicine? FindById(String id)
         {
             List<Medicine> medicines = medicineRepository.ReadFromFile();
@@ -67,6 +68,50 @@ namespace VasilijeSIMS.Service
                 }
             }
             return false;
+        }
+        public List<Medicine> SearchAccepted(string search)
+        {
+            string tekst = search.ToLower();
+            List<Medicine> foundMedicines = new List<Medicine>();
+            List<Medicine> medicines = medicineRepository.getAceppted();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                {
+                    foundMedicines.Add(i);
+                }
+            }
+            return foundMedicines;
+        }
+
+        public List<Medicine> SearchDeclined(string search)
+        {
+            string tekst = search.ToLower();
+            List<Medicine> medicines = medicineRepository.ReadFromFile();
+            List<Medicine> foundMedicines = new List<Medicine>();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                {
+                    foundMedicines.Add(i);
+                }
+            }
+            return foundMedicines;
+        }
+
+        public List<Medicine> SearchAwaiting(string search)
+        {
+            string tekst = search.ToLower();
+            List<Medicine> medicines = medicineRepository.ReadFromFile();
+            List<Medicine> foundMedicines = new List<Medicine>();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                {
+                    foundMedicines.Add(i);
+                }
+            }
+            return foundMedicines;
         }
 
     }

@@ -8,38 +8,11 @@
       "Name": "ibuprofen",
       "Description": "analgetik"
     },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
     "IsDeleted": false,
+    "DeclinedBy": null,
     "ReasonForRejection": ""
-  },
-  {
-    "Id": "p123",
-    "Name": "palitreks",
-    "Manufacturer": "galenika",
-    "Quantity": 4,
-    "IngredientV": {
-      "Name": "palitreks",
-      "Description": "antibiotik"
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "ReasonForRejection": ""
-  },
-  {
-    "Id": "g",
-    "Name": "g",
-    "Manufacturer": "g",
-    "Quantity": 1,
-    "IngredientV": {
-      "Name": "antibiotik",
-      "Description": "fffffff"
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true,
-    "ReasonForRejection": "hbb"
   },
   {
     "Id": "56764ed",
@@ -53,6 +26,7 @@
     "IsAccepted": true,
     "WaitingForConfirmation": false,
     "IsDeleted": false,
+    "DeclinedBy": null,
     "ReasonForRejection": ""
   },
   {
@@ -67,6 +41,7 @@
     "IsAccepted": true,
     "WaitingForConfirmation": false,
     "IsDeleted": false,
+    "DeclinedBy": null,
     "ReasonForRejection": "sjd"
   },
   {
@@ -78,9 +53,10 @@
       "Name": "s",
       "Description": "s"
     },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
     "IsDeleted": false,
+    "DeclinedBy": null,
     "ReasonForRejection": "iwstekao"
   },
   {
@@ -92,9 +68,10 @@
       "Name": "antibiotik",
       "Description": "fffffff"
     },
-    "IsAccepted": true,
+    "IsAccepted": false,
     "WaitingForConfirmation": false,
-    "IsDeleted": false,
+    "IsDeleted": true,
+    "DeclinedBy": null,
     "ReasonForRejection": "dadasd"
   },
   {
@@ -109,6 +86,7 @@
     "IsAccepted": true,
     "WaitingForConfirmation": false,
     "IsDeleted": false,
+    "DeclinedBy": null,
     "ReasonForRejection": "kjjkdhjkghkdhkgjd"
   },
   {
@@ -123,6 +101,55 @@
     "IsAccepted": false,
     "WaitingForConfirmation": false,
     "IsDeleted": true,
+    "DeclinedBy": null,
     "ReasonForRejection": "dadasd"
+  },
+  {
+    "Id": "g",
+    "Name": "g",
+    "Manufacturer": "g",
+    "Quantity": 1,
+    "IngredientV": {
+      "Name": "antibiotik",
+      "Description": "fffffff"
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "p",
+      "Email": "p",
+      "Password": "pp",
+      "Name": "p",
+      "LastName": "p",
+      "PhoneNumber": "p",
+      "TypeUser": 0,
+      "IsBlocked": false
+    },
+    "ReasonForRejection": "khjkhjhjhj"
+  },
+  {
+    "Id": "p123",
+    "Name": "palitreks",
+    "Manufacturer": "galenika",
+    "Quantity": 4,
+    "IngredientV": {
+      "Name": "palitreks",
+      "Description": "antibiotik"
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "w",
+      "Email": "w",
+      "Password": "w",
+      "Name": "w",
+      "LastName": "w",
+      "PhoneNumber": "w",
+      "TypeUser": 1,
+      "IsBlocked": false
+    },
+    "ReasonForRejection": "istekao "
   }
 ]

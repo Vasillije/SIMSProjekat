@@ -1,0 +1,17 @@
+﻿<Window x:Class="VasilijeSIMS.View.RejectionReason"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VasilijeSIMS.View"
+        mc:Ignorable="d"
+        Title="RejectionReason" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="MedicineName"  HorizontalAlignment="Left" Margin="148,58,0,0" VerticalAlignment="Top" Width="166" Background="#FFDEDEE0" Height="37"/>
+        <Label Content="Is rejected by:" HorizontalAlignment="Left" Margin="345,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.428,-0.155" Width="96" Height="33"/>
+        <Label x:Name="Doctor"  HorizontalAlignment="Left" Margin="442,59,0,0" VerticalAlignment="Top" Width="166" Background="#FFDEDEE0" Height="29"/>
+        <Label Content="Reason for rejection" HorizontalAlignment="Left" Margin="318,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.428,-0.155" Width="143"/>
+        <TextBox x:Name="reasonForRejection" HorizontalAlignment="Left" Margin="233,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283" Height="197" TextChanged="TextBox_TextChanged"/>
+
+    </Grid>
+</Window>

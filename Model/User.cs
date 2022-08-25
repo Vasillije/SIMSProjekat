@@ -18,6 +18,7 @@ namespace VasilijeSIMS.Model
         public UserType TypeUser { get; set; }
         public Boolean IsBlocked { get; set; } = false;
 
+
         public User(string jmbg, string email, string password, string name, string lastName, string phoneNumber, UserType typeUser)
         {
             Jmbg = jmbg;
