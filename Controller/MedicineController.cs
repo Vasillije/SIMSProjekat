@@ -22,6 +22,23 @@ namespace VasilijeSIMS.Controller
         {
             return medicineService.CreateMedicine(user);
         }
+        public bool ApprovedByPharmacistCheck(Medicine user)
+        {
+            return medicineService.ApprovedByPharmacistCheck(user);
+        }
+        public bool ApprovedByDoctorCheck(Medicine user)
+        {
+            return medicineService.ApprovedByDoctorCheck(user);
+        }
+        public bool? addToApprovedBy(Medicine m,User user)
+        {
+            return medicineService.addToApprovedBy(m,user);
+        }
+        public bool ThreePeopleCheck(Medicine m)
+        {
+            return medicineService.ThreePeopleCheck(m);
+        }
+        
         public Medicine FindById(String id)
         {
             return medicineService.FindById(id);

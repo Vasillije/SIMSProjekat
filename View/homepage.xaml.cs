@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VasilijeSIMS.Model;
 
 namespace VasilijeSIMS.View
 {
@@ -19,9 +20,27 @@ namespace VasilijeSIMS.View
     /// </summary>
     public partial class homepage : Window
     {
+        public User loggedUser = new User();
         public homepage()
         {
             InitializeComponent();
+            whoIsLogged();
+        }
+
+        private void whoIsLogged()
+        {
+            loggedUser = MainWindow.showUser();
+            switch (loggedUser.TypeUser)
+            {
+                case Enums.UserType.Pharmacist:
+                    users.IsEnabled = false;
+                    break;
+                case Enums.UserType.Doctor:
+                    users.IsEnabled = false;
+                    break;
+                case Enums.UserType.Director:
+                    break;
+            }
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)

@@ -25,20 +25,19 @@ namespace VasilijeSIMS
     public partial class MainWindow : Window
     {
         public UserRepository userRepository = new UserRepository();
-
-
         private static User LoggedUser = new User();
-
-
         int brojac=0;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
         public static User showUser()
         {
             return LoggedUser;
         }
+
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             List<User> users = userRepository.ReadFromFile();
@@ -51,6 +50,7 @@ namespace VasilijeSIMS
 
             Boolean postoji = false;
             Boolean blokiran = false;
+
             foreach (User user in users)
             {
                 if (user.Email.Equals(email.Text) && (user.Password.Equals(password.Password.ToString())))
@@ -66,7 +66,6 @@ namespace VasilijeSIMS
                     postoji = true;
                     LoggedUser = user;
                     showUser();
-                    
                     break; 
                 }
                 else 

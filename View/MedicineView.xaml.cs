@@ -45,15 +45,24 @@ namespace VasilijeSIMS.View
             switch (loggedUser.TypeUser)
             {
                 case Enums.UserType.Pharmacist:
+                    ProcurementOfMedicines.IsEnabled = false;
+                    create.IsEnabled = false;
+                    update.IsEnabled = false;
+                    delete.IsEnabled = false;
                     break;
                 case Enums.UserType.Doctor:
+                    ProcurementOfMedicines.IsEnabled = false;
+                    create.IsEnabled = false;
+                    update.IsEnabled = false;
+                    delete.IsEnabled = false;
                     break;
                 case Enums.UserType.Director:
                     AwaitingConfirmation.IsEnabled = false;
+                    DeclinedMedicines.IsEnabled=false;
                     break;
             }
+        }
 
-            }
         private ObservableCollection<Medicine> Check(ObservableCollection<Medicine> medicineList)
         {
             ObservableCollection<Medicine> AcceptedMedicines = new ObservableCollection<Medicine>();

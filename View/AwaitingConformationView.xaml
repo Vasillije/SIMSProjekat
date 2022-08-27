@@ -19,6 +19,8 @@
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>
         <Button Content="Decline" Click="Decline_Click" HorizontalAlignment="Left" Margin="652,393,0,0" VerticalAlignment="Top"/>
         <Button Content="Confirm " HorizontalAlignment="Left" Margin="711,392,0,0" VerticalAlignment="Top" Click="Confirm_Click"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="637,30,0,0" VerticalAlignment="Top" Width="68" Click="Search_Click"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="504,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

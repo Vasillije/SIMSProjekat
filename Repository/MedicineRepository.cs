@@ -46,7 +46,7 @@ namespace VasilijeSIMS.Repository
             writer.Close();
         }
 
-        public List<Medicine> getAceppted()
+        public List<Medicine> GetAceppted()
         {
             List<Medicine> aceptedMedicines = new List<Medicine>();
             List<Medicine> medicines = ReadFromFile();
@@ -59,8 +59,49 @@ namespace VasilijeSIMS.Repository
             }
             return aceptedMedicines;
         }
-
+        public List<User> getApprovedBy(Medicine medicine)
+        {
+            List<Medicine> medicines = ReadFromFile();
+             foreach (Medicine i in medicines)
+            {
+                if (i.Id.Equals(medicine.Id))
+                {
+                    return i.ApprovedBy;   
+                }
+            }
+            return null;
+        }
+       
+            
         
+
+        public List<Medicine> GetDeclined()
+        {
+            List<Medicine> declinedMedicines = new List<Medicine>();
+            List<Medicine> medicines = ReadFromFile();
+            foreach (Medicine medicine in medicines)
+            {
+                if (medicine.IsAccepted == false && medicine.WaitingForConfirmation == false)
+                {
+                    declinedMedicines.Add(medicine);
+                }
+            }    
+            return declinedMedicines;
+        }
+        
+        public List<Medicine> GetAwaiting()
+        {
+            List<Medicine> medicines = ReadFromFile();
+            List<Medicine> awaitingMedicines = new List<Medicine>();
+            foreach (Medicine i in medicines)
+            {
+                if (i.WaitingForConfirmation == true)
+                {
+                    awaitingMedicines.Add(i);
+                }
+            }
+            return awaitingMedicines;
+        }
     }
 }
 

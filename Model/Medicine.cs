@@ -18,6 +18,9 @@ namespace VasilijeSIMS.Model
         public Boolean WaitingForConfirmation { get; set; }
         public Boolean IsDeleted { get; set; }
         public User DeclinedBy { get; set; }
+        public List<User> ApprovedBy { get; set; }
+       
+
 
         public string ReasonForRejection { get; set; }
 
@@ -34,6 +37,8 @@ namespace VasilijeSIMS.Model
             IsDeleted = false;
             ReasonForRejection = "";
             DeclinedBy = null;
+            ApprovedBy = new List<User>();
+           
         }
         public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC,Boolean isDeleted, string reasonForRejection)
         {
@@ -48,6 +53,7 @@ namespace VasilijeSIMS.Model
             IsDeleted = isDeleted;
             ReasonForRejection = reasonForRejection;
             DeclinedBy = null;
+            ApprovedBy = new List<User>();
         }
         public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC, Boolean isDeleted, string reasonForRejection, User user)
         {
@@ -62,6 +68,7 @@ namespace VasilijeSIMS.Model
             IsDeleted = isDeleted;
             ReasonForRejection = reasonForRejection;
             DeclinedBy = user;
+            ApprovedBy = new List<User>();
         }
 
         public Medicine()

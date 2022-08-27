@@ -17,13 +17,13 @@
             </DataGrid.Columns>
         </DataGrid>
         <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="513,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Create medicine" HorizontalAlignment="Left" Margin="15,380,0,0" VerticalAlignment="Top" Width="102" Click="Create_Click"/>
-        <Button Content="Update medicine" HorizontalAlignment="Left" Margin="337,380,0,0" VerticalAlignment="Top" Width="102" Click="Update_Click"/>
-        <Button Content="Delete medicine" HorizontalAlignment="Left" Margin="665,380,0,0" VerticalAlignment="Top" Width="102" Click="Delete_Click"/>
+        <Button x:Name="create" Content="Create medicine" HorizontalAlignment="Left" Margin="15,380,0,0" VerticalAlignment="Top" Width="102" Click="Create_Click"/>
+        <Button x:Name="update" Content="Update medicine" HorizontalAlignment="Left" Margin="337,380,0,0" VerticalAlignment="Top" Width="102" Click="Update_Click"/>
+        <Button x:Name="delete" Content="Delete medicine" HorizontalAlignment="Left" Margin="665,380,0,0" VerticalAlignment="Top" Width="102" Click="Delete_Click"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="743,28,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>
         <Button x:Name="AwaitingConfirmation" Content="Awaiting confirmation" HorizontalAlignment="Left" Margin="8,30,0,0" VerticalAlignment="Top" Width="124" Click="Awaiting_Conformation_Click"/>
-        <Button Content="Declined medicines" HorizontalAlignment="Left" Margin="169,30,0,0" VerticalAlignment="Top" Width="124" Click="Declined_Medicines_Click"/>
-        <Button Content="Procurement of medicines" HorizontalAlignment="Left" Margin="333,30,0,0" VerticalAlignment="Top" Width="147" Click="Procurement_Of_Medicines_Click"/>
+        <Button x:Name="DeclinedMedicines" Content="Declined medicines" HorizontalAlignment="Left" Margin="169,30,0,0" VerticalAlignment="Top" Width="124" Click="Declined_Medicines_Click"/>
+        <Button x:Name="ProcurementOfMedicines" HorizontalAlignment="Left" Margin="333,30,0,0" VerticalAlignment="Top" Width="147" Click="Procurement_Of_Medicines_Click" Height="18" Content="Procurement Of Medicines"/>
         <Button Content="Search" HorizontalAlignment="Left" Margin="649,30,0,0" VerticalAlignment="Top" Width="70" Click="Search_Click"/>
         <Label Content="Confirmed medicines" HorizontalAlignment="Left" Margin="325,59,0,0" VerticalAlignment="Top"/>
         <Button Click="Refresh_Click"  Content="Refresh table" HorizontalAlignment="Left" Margin="9,57,0,0" VerticalAlignment="Top"/>

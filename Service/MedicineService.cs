@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using VasilijeSIMS.Enums;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
 
@@ -54,6 +55,25 @@ namespace VasilijeSIMS.Service
             medicineRepository.LoadIntoFile(medicines);
             return true;
         }
+        public bool addToApprovedBy(Medicine medicine, User user)
+        {
+            List<User> approved;
+            Medicine newMedicine =medicine;
+            approved = medicineRepository.getApprovedBy(medicine);
+            foreach (User i in approved)
+            {
+                if (i.Jmbg.Equals(user.Jmbg))
+                {
+                    
+                MessageBox.Show("Alreaady approved by this user");
+                return false;
+                }
+            }
+                newMedicine.ApprovedBy.Add(user);
+                UpdateMedicine(medicine, newMedicine);
+                return true;
+           
+        }
         public bool UpdateMedicine(Medicine medicine, Medicine newMedicine)
         {
             List<Medicine> medicines = medicineRepository.ReadFromFile();
@@ -69,11 +89,57 @@ namespace VasilijeSIMS.Service
             }
             return false;
         }
+        public bool ThreePeopleCheck(Medicine medicine)
+        {
+            if (medicineRepository.getApprovedBy(medicine).Count() >= 3)
+            { 
+                return true;
+            }
+            return false;
+                 
+        }
+        public bool ApprovedByPharmacistCheck(Medicine medicine)
+        {
+            List<User> approved = new List<User>();
+            List<User> pharmacist = new List<User>();
+            approved = medicineRepository.getApprovedBy(medicine);
+            foreach (User i in approved)
+            {
+                if (i.TypeUser.Equals(UserType.Pharmacist))
+                {
+                    pharmacist.Add(i);
+                }
+            }
+            if (pharmacist.Distinct().Count() >= 2)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool ApprovedByDoctorCheck(Medicine medicine)
+        {
+            List<User> approved = new List<User>();
+            List<User> doctor = new List<User>();
+            approved = medicineRepository.getApprovedBy(medicine);
+            foreach (User i in approved)
+            {
+                if (i.TypeUser.Equals(UserType.Doctor))
+                {
+                    doctor.Add(i);
+                }
+            }
+            if (doctor.Distinct().Count() >= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public List<Medicine> SearchAccepted(string search)
         {
             string tekst = search.ToLower();
             List<Medicine> foundMedicines = new List<Medicine>();
-            List<Medicine> medicines = medicineRepository.getAceppted();
+            List<Medicine> medicines = medicineRepository.GetAceppted();
             foreach (Medicine i in medicines)
             {
                 if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
@@ -87,7 +153,7 @@ namespace VasilijeSIMS.Service
         public List<Medicine> SearchDeclined(string search)
         {
             string tekst = search.ToLower();
-            List<Medicine> medicines = medicineRepository.ReadFromFile();
+            List<Medicine> medicines = medicineRepository.GetDeclined();
             List<Medicine> foundMedicines = new List<Medicine>();
             foreach (Medicine i in medicines)
             {
@@ -102,7 +168,7 @@ namespace VasilijeSIMS.Service
         public List<Medicine> SearchAwaiting(string search)
         {
             string tekst = search.ToLower();
-            List<Medicine> medicines = medicineRepository.ReadFromFile();
+            List<Medicine> medicines = medicineRepository.GetAwaiting();
             List<Medicine> foundMedicines = new List<Medicine>();
             foreach (Medicine i in medicines)
             {

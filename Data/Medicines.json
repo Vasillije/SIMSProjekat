@@ -12,6 +12,7 @@
     "WaitingForConfirmation": true,
     "IsDeleted": false,
     "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": ""
   },
   {
@@ -27,6 +28,7 @@
     "WaitingForConfirmation": false,
     "IsDeleted": false,
     "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": ""
   },
   {
@@ -42,6 +44,7 @@
     "WaitingForConfirmation": false,
     "IsDeleted": false,
     "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": "sjd"
   },
   {
@@ -57,6 +60,7 @@
     "WaitingForConfirmation": true,
     "IsDeleted": false,
     "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": "iwstekao"
   },
   {
@@ -72,6 +76,7 @@
     "WaitingForConfirmation": false,
     "IsDeleted": true,
     "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": "dadasd"
   },
   {
@@ -87,6 +92,7 @@
     "WaitingForConfirmation": false,
     "IsDeleted": false,
     "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": "kjjkdhjkghkdhkgjd"
   },
   {
@@ -102,6 +108,7 @@
     "WaitingForConfirmation": false,
     "IsDeleted": true,
     "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": "dadasd"
   },
   {
@@ -126,6 +133,7 @@
       "TypeUser": 0,
       "IsBlocked": false
     },
+    "ApprovedBy": null,
     "ReasonForRejection": "khjkhjhjhj"
   },
   {
@@ -137,19 +145,121 @@
       "Name": "palitreks",
       "Description": "antibiotik"
     },
-    "IsAccepted": false,
+    "IsAccepted": true,
     "WaitingForConfirmation": false,
-    "IsDeleted": true,
-    "DeclinedBy": {
-      "Jmbg": "w",
-      "Email": "w",
-      "Password": "w",
-      "Name": "w",
-      "LastName": "w",
-      "PhoneNumber": "w",
-      "TypeUser": 1,
-      "IsBlocked": false
-    },
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": null,
     "ReasonForRejection": "istekao "
+  },
+  {
+    "Id": "56534",
+    "Name": "proba",
+    "Manufacturer": "proba",
+    "Quantity": 7,
+    "IngredientV": {
+      "Name": "proba",
+      "Description": "proba"
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": null,
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "6474847",
+    "Name": "proba2",
+    "Manufacturer": "proba2",
+    "Quantity": 78,
+    "IngredientV": {
+      "Name": "proba2",
+      "Description": "proba2"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [
+      {
+        "Jmbg": "p",
+        "Email": "p",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "p",
+        "Email": "p",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "w",
+        "Email": "w",
+        "Password": "w",
+        "Name": "w",
+        "LastName": "w",
+        "PhoneNumber": "w",
+        "TypeUser": 1,
+        "IsBlocked": false
+      }
+    ],
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "675859",
+    "Name": "proba3",
+    "Manufacturer": "proba3",
+    "Quantity": 89,
+    "IngredientV": {
+      "Name": "proba3",
+      "Description": "proba3"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [
+      {
+        "Jmbg": "p",
+        "Email": "p",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "w",
+        "Email": "w",
+        "Password": "w",
+        "Name": "w",
+        "LastName": "w",
+        "PhoneNumber": "w",
+        "TypeUser": 1,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "89098790",
+        "Email": "uu",
+        "Password": "h",
+        "Name": "hggggg",
+        "LastName": "hhhh",
+        "PhoneNumber": "hhhh",
+        "TypeUser": 0,
+        "IsBlocked": false
+      }
+    ],
+    "ReasonForRejection": ""
   }
 ]

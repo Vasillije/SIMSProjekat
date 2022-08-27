@@ -13,8 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VasilijeSIMS.Controller;
+using VasilijeSIMS.Enums;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
+using VasilijeSIMS.Service;
 
 namespace VasilijeSIMS.View
 {
@@ -26,13 +28,32 @@ namespace VasilijeSIMS.View
         public ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
         public MedicineController medicineController = new MedicineController();
+        public MedicineService medicineService = new MedicineService();
         Medicine CurrentMedicine;
         Medicine NewMedicine;
+        public User loggedUser = new User();
         public AwaitingConformationView()
         {
             InitializeComponent();
             medicines= new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
             AwaitingMedicineTable.ItemsSource = Check(medicines);
+            whoIsLogged();
+        }
+        private void whoIsLogged()
+        {
+            loggedUser = MainWindow.showUser();
+            switch (loggedUser.TypeUser)
+            {
+                case Enums.UserType.Pharmacist:
+                   
+                    break;
+                case Enums.UserType.Doctor:
+                   
+                    break;
+                case Enums.UserType.Director:
+                   
+                    break;
+            }
         }
         public ObservableCollection<Medicine> Check(ObservableCollection<Medicine> medicines)
         {
@@ -61,19 +82,46 @@ namespace VasilijeSIMS.View
             }
         }
 
+        public bool checkIfApproved(Medicine medicine)
+        {
+            if (medicineController.ThreePeopleCheck(medicine) == true && medicineController.ApprovedByDoctorCheck(medicine) && medicineController.ApprovedByPharmacistCheck(medicine))
+            {
+                return true;
+            }
+            return false;
+          
+        }
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             if (AwaitingMedicineTable.SelectedIndex != -1)
             {
+               
                 CurrentMedicine = (Medicine)AwaitingMedicineTable.SelectedItem;
+                medicineController.addToApprovedBy(CurrentMedicine,loggedUser);
                 NewMedicine = CurrentMedicine;
-                NewMedicine.WaitingForConfirmation = false;
-                NewMedicine.IsAccepted = true;
-                NewMedicine.IsDeleted = false;
-                medicineController.UpdateMedicine(CurrentMedicine, NewMedicine);
+                if (checkIfApproved(CurrentMedicine) == true)
+                {
+                    NewMedicine.WaitingForConfirmation = false;
+                    NewMedicine.IsAccepted = true;
+                    NewMedicine.IsDeleted = false;
+                    medicineController.UpdateMedicine(CurrentMedicine, NewMedicine);
+                    Close();
 
-                Close();
+                }
+                else
+                {
+                    MessageBox.Show("Not yet approved");
+                    Close();
+                }
             }
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchAwaiting(searchBox.Text));
+            AwaitingMedicineTable.ItemsSource = help;
         }
     }
 }
