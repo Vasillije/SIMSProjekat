@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="ProcurementOfMedicinesView" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="MedicineTable" Margin="5,68,35,75" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding medicines}"  >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Id"  Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="*"/>
-                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}"  Width="*"/>
-                <DataGridTextColumn Header="Quantity"  Binding="{Binding Quantity}"  Width="*"/>
-                <DataGridTextColumn Header="Ingredients" Binding="{Binding IngredientV}" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>
+        <Label x:Name="medicineName" Content="" HorizontalAlignment="Left" Margin="323,71,0,0" VerticalAlignment="Top" Background="#FFD8D9DC" Width="142" FontSize="18"/>
+        <Label Content="Buy:" HorizontalAlignment="Left" Margin="215,66,0,0" VerticalAlignment="Top" Width="49" Height="35" FontSize="18"/>
+        <Label Content="Current amount" HorizontalAlignment="Left" Margin="210,141,0,0" VerticalAlignment="Top" Width="141" Height="35" FontSize="18"/>
+        <Label x:Name="currentAmount" Content="" HorizontalAlignment="Left" Margin="386,142,0,0" VerticalAlignment="Top" Background="#FFD8D9DC" Width="142" FontSize="18"/>
+        <Label Content="Enter desired amount" HorizontalAlignment="Left" Margin="211,215,0,0" VerticalAlignment="Top" Width="189" Height="35" FontSize="18"/>
+        <Label Content="Pick a date for procurement" HorizontalAlignment="Left" Margin="211,274,0,0" VerticalAlignment="Top" Width="235" Height="35" FontSize="18"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" Margin="478,281,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Buy" HorizontalAlignment="Left" Margin="658,359,0,0" VerticalAlignment="Top" Click="Buy_Click" FontSize="18" Width="82"/>
+        <TextBox x:Name="desiredAmount" HorizontalAlignment="Left" Margin="454,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="18"/>
 
     </Grid>
 </Window>

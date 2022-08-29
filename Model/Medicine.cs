@@ -13,13 +13,16 @@ namespace VasilijeSIMS.Model
         public string Manufacturer { get; set; }
         public int Quantity { get; set; }
         //public IDictionary<int, Ingredient> IngredientV { get; set; }
+        public Dictionary<string, User> ingredient { get; set; }
+       // new Dictionary<string, User>();
         public Ingredient IngredientV { get; set; }
         public Boolean IsAccepted { get; set; }
         public Boolean WaitingForConfirmation { get; set; }
         public Boolean IsDeleted { get; set; }
         public User DeclinedBy { get; set; }
         public List<User> ApprovedBy { get; set; }
-       
+        public DateTime ProcurementDate { get; set; }
+
 
 
         public string ReasonForRejection { get; set; }
@@ -38,7 +41,8 @@ namespace VasilijeSIMS.Model
             ReasonForRejection = "";
             DeclinedBy = null;
             ApprovedBy = new List<User>();
-           
+            ProcurementDate= new DateTime();
+
         }
         public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC,Boolean isDeleted, string reasonForRejection)
         {
@@ -54,6 +58,7 @@ namespace VasilijeSIMS.Model
             ReasonForRejection = reasonForRejection;
             DeclinedBy = null;
             ApprovedBy = new List<User>();
+            ProcurementDate = new DateTime();
         }
         public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC, Boolean isDeleted, string reasonForRejection, User user)
         {
@@ -69,6 +74,7 @@ namespace VasilijeSIMS.Model
             ReasonForRejection = reasonForRejection;
             DeclinedBy = user;
             ApprovedBy = new List<User>();
+            ProcurementDate = new DateTime();
         }
 
         public Medicine()

@@ -127,8 +127,11 @@ namespace VasilijeSIMS.View
 
         private void Procurement_Of_Medicines_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ProcurementOfMedicinesView();
-            s.Show();
+            if (MedicineTable.SelectedIndex != -1)
+            {
+                var s = new ProcurementOfMedicinesView((Medicine)MedicineTable.SelectedItem);
+                s.Show();
+            }
            
         }
 

@@ -94,8 +94,7 @@ namespace VasilijeSIMS.View
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             if (AwaitingMedicineTable.SelectedIndex != -1)
-            {
-               
+            {           
                 CurrentMedicine = (Medicine)AwaitingMedicineTable.SelectedItem;
                 medicineController.addToApprovedBy(CurrentMedicine,loggedUser);
                 NewMedicine = CurrentMedicine;
@@ -106,7 +105,6 @@ namespace VasilijeSIMS.View
                     NewMedicine.IsDeleted = false;
                     medicineController.UpdateMedicine(CurrentMedicine, NewMedicine);
                     Close();
-
                 }
                 else
                 {

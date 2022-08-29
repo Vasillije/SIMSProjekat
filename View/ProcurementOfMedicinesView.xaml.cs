@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VasilijeSIMS.Controller;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
 
@@ -23,18 +24,35 @@ namespace VasilijeSIMS.View
     {
         public List<Medicine> medicines = new List<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
-        public ProcurementOfMedicinesView()
+        public MedicineController medicineController = new MedicineController();
+        public Medicine currentMedicine;
+        public DateTime now = DateTime.Now;
+
+
+        public ProcurementOfMedicinesView(Medicine medicine)
         {
             InitializeComponent();
-            medicines = new List<Medicine>(medicineRepository.ReadFromFile());
-            MedicineTable.ItemsSource = medicines;
+            medicineName.Content=medicine.Name;
+            currentAmount.Content=medicine.Quantity;
+            currentMedicine=medicine;
+            DatePicker.SelectedDate = DateTime.Now.Date;
         }
 
+        
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new MedicineView();
-            s.Show();
             Close();
+        }
+
+        private void Buy_Click(object sender, RoutedEventArgs e)
+        {
+            Medicine newMedicine ;
+            newMedicine = currentMedicine;
+            newMedicine.Quantity = currentMedicine.Quantity + Int32.Parse(desiredAmount.Text);
+            newMedicine.ProcurementDate = DatePicker.SelectedDate.GetValueOrDefault();
+            medicineController.UpdateMedicine(currentMedicine, newMedicine);
+            Close();
+            //DPTime.SelectedDate.GetValueOrDefault()
         }
     }
 }

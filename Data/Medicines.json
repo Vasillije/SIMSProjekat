@@ -4,6 +4,7 @@
     "Name": "brufen",
     "Manufacturer": "galenika",
     "Quantity": 2,
+    "ingredient": null,
     "IngredientV": {
       "Name": "ibuprofen",
       "Description": "analgetik"
@@ -13,6 +14,7 @@
     "IsDeleted": false,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": ""
   },
   {
@@ -20,6 +22,7 @@
     "Name": "probiotik",
     "Manufacturer": "galenika",
     "Quantity": 76,
+    "ingredient": null,
     "IngredientV": {
       "Name": "bulardi",
       "Description": "uz antibiotik"
@@ -29,6 +32,7 @@
     "IsDeleted": false,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": ""
   },
   {
@@ -36,6 +40,7 @@
     "Name": "aspirin",
     "Manufacturer": "galenika",
     "Quantity": 4,
+    "ingredient": null,
     "IngredientV": {
       "Name": "acetilsalicil",
       "Description": "analgetik"
@@ -45,6 +50,7 @@
     "IsDeleted": false,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": "sjd"
   },
   {
@@ -52,6 +58,7 @@
     "Name": "s",
     "Manufacturer": "ssgsgs",
     "Quantity": 2,
+    "ingredient": null,
     "IngredientV": {
       "Name": "s",
       "Description": "s"
@@ -61,6 +68,7 @@
     "IsDeleted": false,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": "iwstekao"
   },
   {
@@ -68,6 +76,7 @@
     "Name": "trt",
     "Manufacturer": "t",
     "Quantity": 5,
+    "ingredient": null,
     "IngredientV": {
       "Name": "antibiotik",
       "Description": "fffffff"
@@ -77,29 +86,15 @@
     "IsDeleted": true,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": "dadasd"
-  },
-  {
-    "Id": "jf",
-    "Name": "sfsjhjhjhjhjhjh",
-    "Manufacturer": "ddd",
-    "Quantity": 3,
-    "IngredientV": {
-      "Name": "ddd",
-      "Description": "ddddd"
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ReasonForRejection": "kjjkdhjkghkdhkgjd"
   },
   {
     "Id": "p",
     "Name": "p",
     "Manufacturer": "p",
     "Quantity": 6,
+    "ingredient": null,
     "IngredientV": {
       "Name": "antibiotik",
       "Description": "fffffff"
@@ -109,6 +104,7 @@
     "IsDeleted": true,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": "dadasd"
   },
   {
@@ -116,6 +112,7 @@
     "Name": "g",
     "Manufacturer": "g",
     "Quantity": 1,
+    "ingredient": null,
     "IngredientV": {
       "Name": "antibiotik",
       "Description": "fffffff"
@@ -134,6 +131,7 @@
       "IsBlocked": false
     },
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": "khjkhjhjhj"
   },
   {
@@ -141,6 +139,7 @@
     "Name": "palitreks",
     "Manufacturer": "galenika",
     "Quantity": 4,
+    "ingredient": null,
     "IngredientV": {
       "Name": "palitreks",
       "Description": "antibiotik"
@@ -150,6 +149,7 @@
     "IsDeleted": false,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": "istekao "
   },
   {
@@ -157,6 +157,7 @@
     "Name": "proba",
     "Manufacturer": "proba",
     "Quantity": 7,
+    "ingredient": null,
     "IngredientV": {
       "Name": "proba",
       "Description": "proba"
@@ -166,6 +167,7 @@
     "IsDeleted": false,
     "DeclinedBy": null,
     "ApprovedBy": null,
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": ""
   },
   {
@@ -173,6 +175,7 @@
     "Name": "proba2",
     "Manufacturer": "proba2",
     "Quantity": 78,
+    "ingredient": null,
     "IngredientV": {
       "Name": "proba2",
       "Description": "proba2"
@@ -213,6 +216,7 @@
         "IsBlocked": false
       }
     ],
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": ""
   },
   {
@@ -220,6 +224,7 @@
     "Name": "proba3",
     "Manufacturer": "proba3",
     "Quantity": 89,
+    "ingredient": null,
     "IngredientV": {
       "Name": "proba3",
       "Description": "proba3"
@@ -260,6 +265,25 @@
         "IsBlocked": false
       }
     ],
+    "ProcurementDate": "0001-01-01T00:00:00",
     "ReasonForRejection": ""
+  },
+  {
+    "Id": "jf",
+    "Name": "sfsjhjhjhjhjhjh",
+    "Manufacturer": "ddd",
+    "Quantity": 12,
+    "ingredient": null,
+    "IngredientV": {
+      "Name": "ddd",
+      "Description": "ddddd"
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": null,
+    "ProcurementDate": "2022-08-29T00:00:00+02:00",
+    "ReasonForRejection": "kjjkdhjkghkdhkgjd"
   }
 ]
