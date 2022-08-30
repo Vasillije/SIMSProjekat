@@ -5,22 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VasilijeSIMS.View"
         mc:Ignorable="d"
-        Title="AddMedicineView" Height="530" Width="333">
+        Title="AddMedicineView" Height="530" Width="1000">
     <Grid>
-        <Label Content="ID:" HorizontalAlignment="Left" Margin="51,36,0,0" VerticalAlignment="Top"/>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="51,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Manufacturer:" HorizontalAlignment="Left" Margin="51,136,0,0" VerticalAlignment="Top"/>
-        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="51,186,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ingredient name:" HorizontalAlignment="Left" Margin="50,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.562,-2.564"/>
-        <Label Content="Description:" HorizontalAlignment="Left" Margin="50,293,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.562,-2.564"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="51,54,0,0" VerticalAlignment="Top" Height="32"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="51,116,0,0" VerticalAlignment="Top" Height="31"/>
+        <Label Content="Manufacturer:" HorizontalAlignment="Left" Margin="51,177,0,0" VerticalAlignment="Top" Height="32"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="51,239,0,0" VerticalAlignment="Top" Height="32"/>
 
-        <TextBox Name="id" HorizontalAlignment="Left" Margin="152,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="name" HorizontalAlignment="Left" Margin="152,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="manufacturer" HorizontalAlignment="Left" Margin="152,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="quantity" HorizontalAlignment="Left" Margin="152,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="ingredientName" HorizontalAlignment="Left" Margin="153,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="description" HorizontalAlignment="Left" Margin="153,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="71"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Margin="152,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="23"/>
+        <TextBox Name="name" HorizontalAlignment="Left" Margin="152,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBox Name="manufacturer" HorizontalAlignment="Left" Margin="152,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBox Name="quantity" HorizontalAlignment="Left" Margin="152,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="53,421,0,0" VerticalAlignment="Top" Click="Cancel_Click"/>
         <Button Content="Confirm" HorizontalAlignment="Left" Margin="224,421,0,0" Click="Confirm_Click" VerticalAlignment="Top" RenderTransformOrigin="0.25,-5.429"/>
+        <DataGrid x:Name="ingredientsDataGrid"  Margin="346,40,35,147"/>
     </Grid>
 </Window>

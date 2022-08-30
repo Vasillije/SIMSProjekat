@@ -1,6 +1,22 @@
 [
   {
     "Name": "antibiotik",
-    "Description": "fffffff"
+    "Description": "fffffff",
+    "IsChecked": false
+  },
+  {
+    "Name": "antibiotik2",
+    "Description": "fffffff",
+    "IsChecked": false
+  },
+  {
+    "Name": "antibiotik3",
+    "Description": "fffffff",
+    "IsChecked": false
+  },
+  {
+    "Name": "antibiotik4",
+    "Description": "fffffff",
+    "IsChecked": false
   }
 ]

@@ -71,7 +71,11 @@ namespace VasilijeSIMS.View
         {
             Close();
         }
-
+        private void ShowIngredient(object sender, RoutedEventArgs e)
+        {
+            var s = new IngredientView((Medicine)AwaitingMedicineTable.SelectedItem);
+            s.Show();
+        }
         private void Decline_Click(object sender, RoutedEventArgs e)
         {
             if (AwaitingMedicineTable.SelectedIndex != -1)

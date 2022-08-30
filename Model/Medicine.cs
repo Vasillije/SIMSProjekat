@@ -12,9 +12,9 @@ namespace VasilijeSIMS.Model
         public string Name { get; set; }
         public string Manufacturer { get; set; }
         public int Quantity { get; set; }
-        //public IDictionary<int, Ingredient> IngredientV { get; set; }
-        public Dictionary<string, User> ingredient { get; set; }
-       // new Dictionary<string, User>();
+       
+        public Dictionary<string, Ingredient> ingredientDictionary { get; set; }
+      
         public Ingredient IngredientV { get; set; }
         public Boolean IsAccepted { get; set; }
         public Boolean WaitingForConfirmation { get; set; }
@@ -27,14 +27,13 @@ namespace VasilijeSIMS.Model
 
         public string ReasonForRejection { get; set; }
 
-        public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc)
+        public Medicine(string id, string name, string manufacturer, int quantity,Dictionary<string,Ingredient> IngredientDictionary)
         {
             Id = id;
             Name = name;
             Manufacturer = manufacturer;
             Quantity = quantity;
-            //IngredientV = new Dictionary<int, Ingredient>();
-            IngredientV = new Ingredient(iname, idesc);
+            ingredientDictionary = IngredientDictionary;
             IsAccepted = false;
             WaitingForConfirmation = true;
             IsDeleted = false;
@@ -44,14 +43,14 @@ namespace VasilijeSIMS.Model
             ProcurementDate= new DateTime();
 
         }
-        public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC,Boolean isDeleted, string reasonForRejection)
+        public Medicine(string id, string name, string manufacturer, int quantity, Dictionary<string, Ingredient> IngredientDictionary, Boolean isAccepted, Boolean WFC,Boolean isDeleted, string reasonForRejection)
         {
             Id = id;
             Name = name;
             Manufacturer = manufacturer;
             Quantity = quantity;
             //IngredientV =new Dictionary<int, Ingredient>();
-            IngredientV = new Ingredient(iname, idesc);
+            ingredientDictionary = IngredientDictionary;
             IsAccepted = isAccepted;
             WaitingForConfirmation = WFC;
             IsDeleted = isDeleted;
@@ -60,14 +59,14 @@ namespace VasilijeSIMS.Model
             ApprovedBy = new List<User>();
             ProcurementDate = new DateTime();
         }
-        public Medicine(string id, string name, string manufacturer, int quantity, string iname, string idesc, Boolean isAccepted, Boolean WFC, Boolean isDeleted, string reasonForRejection, User user)
+        public Medicine(string id, string name, string manufacturer, int quantity, Dictionary<string, Ingredient> IngredientDictionary, Boolean isAccepted, Boolean WFC, Boolean isDeleted, string reasonForRejection, User user)
         {
             Id = id;
             Name = name;
             Manufacturer = manufacturer;
             Quantity = quantity;
             //IngredientV =new Dictionary<int, Ingredient>();
-            IngredientV = new Ingredient(iname, idesc);
+            ingredientDictionary = IngredientDictionary;
             IsAccepted = isAccepted;
             WaitingForConfirmation = WFC;
             IsDeleted = isDeleted;

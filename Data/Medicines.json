@@ -4,10 +4,11 @@
     "Name": "brufen",
     "Manufacturer": "galenika",
     "Quantity": 2,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "ibuprofen",
-      "Description": "analgetik"
+      "Description": "analgetik",
+      "IsChecked": false
     },
     "IsAccepted": false,
     "WaitingForConfirmation": true,
@@ -22,10 +23,11 @@
     "Name": "probiotik",
     "Manufacturer": "galenika",
     "Quantity": 76,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "bulardi",
-      "Description": "uz antibiotik"
+      "Description": "uz antibiotik",
+      "IsChecked": false
     },
     "IsAccepted": true,
     "WaitingForConfirmation": false,
@@ -40,10 +42,11 @@
     "Name": "aspirin",
     "Manufacturer": "galenika",
     "Quantity": 4,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "acetilsalicil",
-      "Description": "analgetik"
+      "Description": "analgetik",
+      "IsChecked": false
     },
     "IsAccepted": true,
     "WaitingForConfirmation": false,
@@ -58,10 +61,11 @@
     "Name": "s",
     "Manufacturer": "ssgsgs",
     "Quantity": 2,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "s",
-      "Description": "s"
+      "Description": "s",
+      "IsChecked": false
     },
     "IsAccepted": false,
     "WaitingForConfirmation": true,
@@ -76,10 +80,11 @@
     "Name": "trt",
     "Manufacturer": "t",
     "Quantity": 5,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "antibiotik",
-      "Description": "fffffff"
+      "Description": "fffffff",
+      "IsChecked": false
     },
     "IsAccepted": false,
     "WaitingForConfirmation": false,
@@ -94,10 +99,11 @@
     "Name": "p",
     "Manufacturer": "p",
     "Quantity": 6,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "antibiotik",
-      "Description": "fffffff"
+      "Description": "fffffff",
+      "IsChecked": false
     },
     "IsAccepted": false,
     "WaitingForConfirmation": false,
@@ -112,10 +118,11 @@
     "Name": "g",
     "Manufacturer": "g",
     "Quantity": 1,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "antibiotik",
-      "Description": "fffffff"
+      "Description": "fffffff",
+      "IsChecked": false
     },
     "IsAccepted": false,
     "WaitingForConfirmation": false,
@@ -139,10 +146,11 @@
     "Name": "palitreks",
     "Manufacturer": "galenika",
     "Quantity": 4,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "palitreks",
-      "Description": "antibiotik"
+      "Description": "antibiotik",
+      "IsChecked": false
     },
     "IsAccepted": true,
     "WaitingForConfirmation": false,
@@ -157,10 +165,11 @@
     "Name": "proba",
     "Manufacturer": "proba",
     "Quantity": 7,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "proba",
-      "Description": "proba"
+      "Description": "proba",
+      "IsChecked": false
     },
     "IsAccepted": false,
     "WaitingForConfirmation": true,
@@ -175,10 +184,11 @@
     "Name": "proba2",
     "Manufacturer": "proba2",
     "Quantity": 78,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "proba2",
-      "Description": "proba2"
+      "Description": "proba2",
+      "IsChecked": false
     },
     "IsAccepted": true,
     "WaitingForConfirmation": false,
@@ -224,10 +234,11 @@
     "Name": "proba3",
     "Manufacturer": "proba3",
     "Quantity": 89,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "proba3",
-      "Description": "proba3"
+      "Description": "proba3",
+      "IsChecked": false
     },
     "IsAccepted": true,
     "WaitingForConfirmation": false,
@@ -273,10 +284,11 @@
     "Name": "sfsjhjhjhjhjhjh",
     "Manufacturer": "ddd",
     "Quantity": 23,
-    "ingredient": null,
+    "ingredientDictionary": null,
     "IngredientV": {
       "Name": "ddd",
-      "Description": "ddddd"
+      "Description": "ddddd",
+      "IsChecked": false
     },
     "IsAccepted": true,
     "WaitingForConfirmation": false,
@@ -285,5 +297,36 @@
     "ApprovedBy": null,
     "ProcurementDate": "2022-08-30T00:00:00+02:00",
     "ReasonForRejection": "kjjkdhjkghkdhkgjd"
+  },
+  {
+    "Id": "proba5",
+    "Name": "proba5",
+    "Manufacturer": "proba5",
+    "Quantity": 5,
+    "ingredientDictionary": {
+      "antibiotikkey": {
+        "Name": "antibiotik",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik2key": {
+        "Name": "antibiotik2",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": ""
   }
 ]

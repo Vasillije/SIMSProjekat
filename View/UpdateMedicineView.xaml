@@ -5,28 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VasilijeSIMS.View"
         mc:Ignorable="d"
-        Title="UpdateMedicineView" Height="530" Width="333">
+        Title="UpdateMedicineView" Height="530" Width="1000">
     <Grid>
-        <Label Content="ID:" HorizontalAlignment="Left" Margin="51,36,0,0" VerticalAlignment="Top"/>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="51,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Manufacturer:" HorizontalAlignment="Left" Margin="51,136,0,0" VerticalAlignment="Top"/>
-        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="51,186,0,0" VerticalAlignment="Top"/>
-        <Label Content="Accepted:" HorizontalAlignment="Left" Margin="51,236,0,0" VerticalAlignment="Top"/>
-        <Label Content="Deleted:" HorizontalAlignment="Left" Margin="51,286,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ingredient:" HorizontalAlignment="Left" Margin="50,338,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="51,50,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="51,104,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label Content="Manufacturer:" HorizontalAlignment="Left" Margin="51,156,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="51,210,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label Content="Accepted:" HorizontalAlignment="Left" Margin="51,262,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Declined:" HorizontalAlignment="Left" Margin="51,314,0,0" VerticalAlignment="Top" Height="28"/>
 
-        <TextBox Name="id" HorizontalAlignment="Left" Margin="152,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="name" HorizontalAlignment="Left" Margin="152,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="manufacturer" HorizontalAlignment="Left" Margin="152,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="quantity" HorizontalAlignment="Left" Margin="152,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="ingredients" HorizontalAlignment="Left" Margin="152,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Margin="152,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="19"/>
+        <TextBox Name="name" HorizontalAlignment="Left" Margin="152,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="19"/>
+        <TextBox Name="manufacturer" HorizontalAlignment="Left" Margin="152,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="19"/>
+        <TextBox Name="quantity" HorizontalAlignment="Left" Margin="152,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="19"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="48,452,0,0" VerticalAlignment="Top" Click="Cancel_Click"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="252,452,0,0" Click="Confirm_Click" VerticalAlignment="Top" RenderTransformOrigin="0.25,-5.429"/>
-        <RadioButton x:Name="yes1" GroupName="1" Content="Yes" HorizontalAlignment="Left" Margin="158,244,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="no1" Content="No" IsChecked="True" GroupName="1" HorizontalAlignment="Left" Margin="219,244,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="yes2" GroupName="2" Content="Yes" HorizontalAlignment="Left" Margin="159,292,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="no2" Content="No" IsChecked="True" GroupName="2" HorizontalAlignment="Left" Margin="218,292,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ingredient description:" HorizontalAlignment="Left" Margin="8,383,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ingredients_description" HorizontalAlignment="Left" Margin="150,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="60"/>
+        <Button Content="Confirm" Click="Confirm_Click" HorizontalAlignment="Left" Margin="252,452,0,0"  VerticalAlignment="Top" RenderTransformOrigin="0.25,-5.429"/>
+        <RadioButton  x:Name="yes1" GroupName="1" Content="Yes" HorizontalAlignment="Left" Margin="158,271,0,0" VerticalAlignment="Top" Height="16"/>
+        <RadioButton x:Name="no1" Content="No" IsChecked="True" GroupName="1" HorizontalAlignment="Left" Margin="219,271,0,0" VerticalAlignment="Top" Height="16"/>
+        <RadioButton x:Name="yes2" GroupName="2" Content="Yes" HorizontalAlignment="Left" Margin="159,321,0,0" VerticalAlignment="Top" Height="16"/>
+        <RadioButton x:Name="no2" Content="No" IsChecked="True" GroupName="2" HorizontalAlignment="Left" Margin="218,321,0,0" VerticalAlignment="Top" Height="16"/>
+        <DataGrid x:Name="ingredientsDataGrid"  Margin="341,33,40,154"/>
     </Grid>
 </Window>

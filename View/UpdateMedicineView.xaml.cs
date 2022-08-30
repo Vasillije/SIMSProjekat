@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VasilijeSIMS.Controller;
 using VasilijeSIMS.Model;
+using VasilijeSIMS.Repository;
 
 namespace VasilijeSIMS.View
 {
@@ -23,6 +25,8 @@ namespace VasilijeSIMS.View
     {
         MedicineController medicineController = new MedicineController();
         Medicine oldMedicine = new Medicine();
+        public IngredientRepository ingredientRepository = new IngredientRepository();
+        public ObservableCollection<Ingredient> ingredients = new ObservableCollection<Ingredient>();
         public UpdateMedicineView(Medicine medicine)
         {
             InitializeComponent();
@@ -31,8 +35,9 @@ namespace VasilijeSIMS.View
             name.Text = medicine.Name;
             manufacturer.Text = medicine.Manufacturer;
             quantity.Text = medicine.Quantity.ToString();
-            ingredients.Text = medicine.IngredientV.Name;
-            ingredients_description.Text = medicine.IngredientV.Description;
+            ingredients = new ObservableCollection<Ingredient>(medicine.ingredientDictionary.Values);
+            ingredientsDataGrid.ItemsSource = showIngredients(ingredients);
+           
             if (medicine.IsAccepted)
                 yes1.IsChecked = true;
             else
@@ -45,14 +50,49 @@ namespace VasilijeSIMS.View
 
         }
 
+        private ObservableCollection<Ingredient> showIngredients(ObservableCollection<Ingredient> ingredientsList)
+        {
+            ObservableCollection<Ingredient> ing = new ObservableCollection<Ingredient>(ingredientRepository.ReadFromFile());
+
+            foreach (Ingredient i in ing)
+            {
+                foreach (Ingredient ii in ingredientsList)
+               {
+                    if (i.Name == ii.Name)
+                    {
+                        i.IsChecked = true;
+                    }
+               }
+            }
+            return ing;
+        }
+
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-
+        private List<Ingredient> IngredientsChecked()
+        {
+            List<Ingredient> checkedIngredients = new List<Ingredient>();
+            foreach (Ingredient ingr in ingredientsDataGrid.ItemsSource)
+            {
+                if (ingr.IsChecked == true)
+                {
+                    checkedIngredients.Add(ingr);
+                }
+            }
+            return checkedIngredients;
+        }
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse(quantity.Text), ingredients.Text, ingredients_description.Text, oldMedicine.IsAccepted,oldMedicine.WaitingForConfirmation, oldMedicine.IsDeleted, oldMedicine.ReasonForRejection);
+            List<Ingredient> ingredientsList = IngredientsChecked();
+            Dictionary<string, Ingredient> ingredientsDictionary = new Dictionary<string, Ingredient>();
+            foreach (Ingredient i in ingredientsList)
+            {
+                ingredientsDictionary.Add(i.Name + "key", i);
+
+            }
+            Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse(quantity.Text), ingredientsDictionary, oldMedicine.IsAccepted,oldMedicine.WaitingForConfirmation, oldMedicine.IsDeleted, oldMedicine.ReasonForRejection);
             if (newMedicine.IsAccepted ==false && newMedicine.IsDeleted==true && newMedicine.WaitingForConfirmation == false )
             {
                 newMedicine.WaitingForConfirmation= true;
@@ -63,5 +103,6 @@ namespace VasilijeSIMS.View
             MessageBox.Show("medicine successfully changed");
             Close();
         }
+       
     }
 }

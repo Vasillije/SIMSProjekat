@@ -89,3 +89,5 @@ C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\
 C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\View\RejectionReason.g.cs
 C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\View\RejectionReason.baml
 C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\bin\Debug\net6.0-windows\DynamicExpresso.Core.dll
+C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\View\IngredientView.g.cs
+C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\obj\Debug\net6.0-windows\View\IngredientView.baml

@@ -47,7 +47,11 @@ namespace VasilijeSIMS.View
             }
             return declinedMedicines;
         }
-
+        private void ShowIngredient(object sender, RoutedEventArgs e)
+        {
+            var s = new IngredientView((Medicine)MedicineTable.SelectedItem);
+            s.Show();
+        }
         private void Back_Click(object sender, RoutedEventArgs e)
         {
            Close();

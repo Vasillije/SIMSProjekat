@@ -20,6 +20,16 @@
     "IsBlocked": false
   },
   {
+    "Jmbg": "f",
+    "Email": "f",
+    "Password": "f",
+    "Name": "f",
+    "LastName": "f",
+    "PhoneNumber": "f",
+    "TypeUser": 0,
+    "IsBlocked": false
+  },
+  {
     "Jmbg": "p1",
     "Email": "pharmacist1@gmail.com",
     "Password": "pharmacist1",

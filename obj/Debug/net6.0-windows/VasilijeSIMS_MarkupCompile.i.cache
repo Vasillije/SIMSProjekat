@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Vasilije\Desktop\SIMSProjekatGit\VasilijeSIMS\App.xaml
-13-1839521193
+141001008966
 
-271127306361
+311227885180
 196287293185
-MainWindow.xaml;View\AddMedicineView.xaml;View\AddUserView.xaml;View\AwaitingConformationView.xaml;View\DeclinedMedicinesView.xaml;View\DeclineMedicine.xaml;View\homepage.xaml;View\MedicineView.xaml;View\ProcurementOfMedicinesView.xaml;View\RejectionReason.xaml;View\UpdateMedicineView.xaml;View\UpdateUserView.xaml;View\UserView.xaml;
+MainWindow.xaml;View\AddMedicineView.xaml;View\AddUserView.xaml;View\AwaitingConformationView.xaml;View\DeclinedMedicinesView.xaml;View\DeclineMedicine.xaml;View\homepage.xaml;View\IngredientView.xaml;View\MedicineView.xaml;View\ProcurementOfMedicinesView.xaml;View\RejectionReason.xaml;View\UpdateMedicineView.xaml;View\UpdateUserView.xaml;View\UserView.xaml;
 
 False
 

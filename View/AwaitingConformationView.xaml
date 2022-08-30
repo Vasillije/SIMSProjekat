@@ -7,13 +7,20 @@
         mc:Ignorable="d"
         Title="AwaitingConformationView" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="AwaitingMedicineTable" Margin="37,68,35,75" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding medicines}"  >
+        <DataGrid x:Name="AwaitingMedicineTable" Margin="46,64,26,79" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding medicines}"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id"  Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="*"/>
                 <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}"  Width="*"/>
                 <DataGridTextColumn Header="Quantity"  Binding="{Binding Quantity}"  Width="*"/>
-                <DataGridTextColumn Header="Ingredients" Binding="{Binding IngredientV.Name}" Width="*"/>
+               
+                <DataGridTemplateColumn Header="Ingredients"  Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Show Ingredients" Click="ShowIngredient"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>

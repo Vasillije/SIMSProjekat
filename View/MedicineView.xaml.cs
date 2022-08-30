@@ -134,6 +134,11 @@ namespace VasilijeSIMS.View
             }
            
         }
+        private void ShowIngredient(object sender, RoutedEventArgs e)
+        {
+            var s = new IngredientView((Medicine)MedicineTable.SelectedItem);
+            s.Show();
+        }
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
         {
