@@ -1,314 +1,10 @@
 [
   {
-    "Id": "1234br",
-    "Name": "brufen",
-    "Manufacturer": "galenika",
-    "Quantity": 2,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "ibuprofen",
-      "Description": "analgetik",
-      "IsChecked": false
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": ""
-  },
-  {
-    "Id": "56764ed",
-    "Name": "probiotik",
-    "Manufacturer": "galenika",
-    "Quantity": 76,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "bulardi",
-      "Description": "uz antibiotik",
-      "IsChecked": false
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": ""
-  },
-  {
-    "Id": "12345",
-    "Name": "aspirin",
-    "Manufacturer": "galenika",
-    "Quantity": 4,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "acetilsalicil",
-      "Description": "analgetik",
-      "IsChecked": false
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "sjd"
-  },
-  {
-    "Id": "s",
-    "Name": "s",
-    "Manufacturer": "ssgsgs",
-    "Quantity": 2,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "s",
-      "Description": "s",
-      "IsChecked": false
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "iwstekao"
-  },
-  {
-    "Id": "ttt",
-    "Name": "trt",
-    "Manufacturer": "t",
-    "Quantity": 5,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "antibiotik",
-      "Description": "fffffff",
-      "IsChecked": false
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "dadasd"
-  },
-  {
-    "Id": "p",
-    "Name": "p",
-    "Manufacturer": "p",
-    "Quantity": 6,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "antibiotik",
-      "Description": "fffffff",
-      "IsChecked": false
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "dadasd"
-  },
-  {
-    "Id": "g",
-    "Name": "g",
-    "Manufacturer": "g",
-    "Quantity": 1,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "antibiotik",
-      "Description": "fffffff",
-      "IsChecked": false
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true,
-    "DeclinedBy": {
-      "Jmbg": "p",
-      "Email": "p",
-      "Password": "pp",
-      "Name": "p",
-      "LastName": "p",
-      "PhoneNumber": "p",
-      "TypeUser": 0,
-      "IsBlocked": false
-    },
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "khjkhjhjhj"
-  },
-  {
-    "Id": "p123",
-    "Name": "palitreks",
-    "Manufacturer": "galenika",
-    "Quantity": 4,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "palitreks",
-      "Description": "antibiotik",
-      "IsChecked": false
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "istekao "
-  },
-  {
-    "Id": "56534",
-    "Name": "proba",
-    "Manufacturer": "proba",
-    "Quantity": 7,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "proba",
-      "Description": "proba",
-      "IsChecked": false
-    },
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": ""
-  },
-  {
-    "Id": "6474847",
-    "Name": "proba2",
-    "Manufacturer": "proba2",
-    "Quantity": 78,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "proba2",
-      "Description": "proba2",
-      "IsChecked": false
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": [
-      {
-        "Jmbg": "p",
-        "Email": "p",
-        "Password": "pp",
-        "Name": "p",
-        "LastName": "p",
-        "PhoneNumber": "p",
-        "TypeUser": 0,
-        "IsBlocked": false
-      },
-      {
-        "Jmbg": "p",
-        "Email": "p",
-        "Password": "pp",
-        "Name": "p",
-        "LastName": "p",
-        "PhoneNumber": "p",
-        "TypeUser": 0,
-        "IsBlocked": false
-      },
-      {
-        "Jmbg": "w",
-        "Email": "w",
-        "Password": "w",
-        "Name": "w",
-        "LastName": "w",
-        "PhoneNumber": "w",
-        "TypeUser": 1,
-        "IsBlocked": false
-      }
-    ],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": ""
-  },
-  {
-    "Id": "675859",
-    "Name": "proba3",
-    "Manufacturer": "proba3",
-    "Quantity": 89,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "proba3",
-      "Description": "proba3",
-      "IsChecked": false
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": [
-      {
-        "Jmbg": "p",
-        "Email": "p",
-        "Password": "pp",
-        "Name": "p",
-        "LastName": "p",
-        "PhoneNumber": "p",
-        "TypeUser": 0,
-        "IsBlocked": false
-      },
-      {
-        "Jmbg": "w",
-        "Email": "w",
-        "Password": "w",
-        "Name": "w",
-        "LastName": "w",
-        "PhoneNumber": "w",
-        "TypeUser": 1,
-        "IsBlocked": false
-      },
-      {
-        "Jmbg": "89098790",
-        "Email": "uu",
-        "Password": "h",
-        "Name": "hggggg",
-        "LastName": "hhhh",
-        "PhoneNumber": "hhhh",
-        "TypeUser": 0,
-        "IsBlocked": false
-      }
-    ],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": ""
-  },
-  {
-    "Id": "jf",
-    "Name": "sfsjhjhjhjhjhjh",
-    "Manufacturer": "ddd",
-    "Quantity": 23,
-    "ingredientDictionary": null,
-    "IngredientV": {
-      "Name": "ddd",
-      "Description": "ddddd",
-      "IsChecked": false
-    },
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": null,
-    "ProcurementDate": "2022-08-30T00:00:00+02:00",
-    "ReasonForRejection": "kjjkdhjkghkdhkgjd"
-  },
-  {
-    "Id": "proba5",
-    "Name": "proba5",
-    "Manufacturer": "proba5",
+    "Id": "y",
+    "Name": "y",
+    "Manufacturer": "y",
     "Quantity": 5,
     "ingredientDictionary": {
-      "antibiotikkey": {
-        "Name": "antibiotik",
-        "Description": "fffffff",
-        "IsChecked": true
-      },
       "antibiotik2key": {
         "Name": "antibiotik2",
         "Description": "fffffff",
@@ -327,6 +23,355 @@
     "DeclinedBy": null,
     "ApprovedBy": [],
     "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "1",
+    "Name": "panklav",
+    "Manufacturer": "galenika",
+    "Quantity": 22,
+    "ingredientDictionary": {
+      "antibiotikkey": {
+        "Name": "antibiotik",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "nije upotrebljiv"
+  },
+  {
+    "Id": "5",
+    "Name": "strepsils",
+    "Manufacturer": "BojanaLek",
+    "Quantity": 43,
+    "ingredientDictionary": {
+      "antibiotikkey": {
+        "Name": "antibiotik",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik2key": {
+        "Name": "antibiotik2",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik4key": {
+        "Name": "antibiotik4",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "123",
+      "Email": "p",
+      "Password": "pp",
+      "Name": "p",
+      "LastName": "p",
+      "PhoneNumber": "p",
+      "TypeUser": 0,
+      "IsBlocked": false
+    },
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "sada"
+  },
+  {
+    "Id": "s",
+    "Name": "s",
+    "Manufacturer": "s",
+    "Quantity": 6,
+    "ingredientDictionary": {
+      "antibiotik2key": {
+        "Name": "antibiotik2",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "123",
+      "Email": "p",
+      "Password": "pp",
+      "Name": "p",
+      "LastName": "p",
+      "PhoneNumber": "p",
+      "TypeUser": 0,
+      "IsBlocked": false
+    },
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "ne vallja"
+  },
+  {
+    "Id": "3",
+    "Name": "brufen",
+    "Manufacturer": "Apoteka Jankovic",
+    "Quantity": 9,
+    "ingredientDictionary": {
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik4key": {
+        "Name": "antibiotik4",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "123",
+      "Email": "p",
+      "Password": "pp",
+      "Name": "p",
+      "LastName": "p",
+      "PhoneNumber": "p",
+      "TypeUser": 0,
+      "IsBlocked": false
+    },
+    "ApprovedBy": [
+      {
+        "Jmbg": "123",
+        "Email": "p",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      }
+    ],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "neispravan"
+  },
+  {
+    "Id": "10",
+    "Name": "optimel",
+    "Manufacturer": "sssr",
+    "Quantity": 87,
+    "ingredientDictionary": {
+      "antibiotikkey": {
+        "Name": "antibiotik",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "123",
+      "Email": "p",
+      "Password": "pp",
+      "Name": "p",
+      "LastName": "p",
+      "PhoneNumber": "p",
+      "TypeUser": 0,
+      "IsBlocked": false
+    },
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "lose utice na spavanje"
+  },
+  {
+    "Id": "9",
+    "Name": "nixar",
+    "Manufacturer": "herbalife",
+    "Quantity": 1,
+    "ingredientDictionary": {
+      "antibiotik2key": {
+        "Name": "antibiotik2",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "istekao rok"
+  },
+  {
+    "Id": "4",
+    "Name": "sebamed",
+    "Manufacturer": "galenika",
+    "Quantity": 65,
+    "ingredientDictionary": {
+      "antibiotik2key": {
+        "Name": "antibiotik2",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "aaaaaaa"
+  },
+  {
+    "Id": "6",
+    "Name": "Defrinol",
+    "Manufacturer": "hemofarm",
+    "Quantity": 21,
+    "ingredientDictionary": {
+      "antibiotik4key": {
+        "Name": "antibiotik4",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "gsgs"
+  },
+  {
+    "Id": "7",
+    "Name": "paracetamol",
+    "Manufacturer": "BojanaLek",
+    "Quantity": 11,
+    "ingredientDictionary": {
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [
+      {
+        "Jmbg": "123",
+        "Email": "p",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "1234",
+        "Email": "p1",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "w",
+        "Email": "w",
+        "Password": "w",
+        "Name": "w",
+        "LastName": "w",
+        "PhoneNumber": "w",
+        "TypeUser": 1,
+        "IsBlocked": false
+      }
+    ],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "2",
+    "Name": "palitrex",
+    "Manufacturer": "hemofarm",
+    "Quantity": 2,
+    "ingredientDictionary": {
+      "antibiotik2key": {
+        "Name": "antibiotik2",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "ne valja"
+  },
+  {
+    "Id": "8",
+    "Name": "brufen",
+    "Manufacturer": "sssr",
+    "Quantity": 20,
+    "ingredientDictionary": {
+      "antibiotik2key": {
+        "Name": "antibiotik2",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik4key": {
+        "Name": "antibiotik4",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IngredientV": null,
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "2022-08-31T00:00:00+02:00",
     "ReasonForRejection": ""
   }
 ]

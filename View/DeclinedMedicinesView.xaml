@@ -13,7 +13,7 @@
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="*"/>
                 <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}"  Width="*"/>
                 <DataGridTextColumn Header="Quantity"  Binding="{Binding Quantity}"  Width="*"/>
-                
+
 
                 <DataGridTemplateColumn Header="Ingredients"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
@@ -22,21 +22,26 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-            
-            <DataGridTemplateColumn Header="Rejection"  Width="*">
+
+                <DataGridTemplateColumn Header="Rejection"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Rejection reason" Click="ShowRejection"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                
+
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="725,30,0,0" VerticalAlignment="Top" Width="40" Click="Back_Click"/>
         <Button Name="correctData" Click="Correct_Click" Content="Correct data" HorizontalAlignment="Left" Margin="671,369,0,0" VerticalAlignment="Top" Width="96"/>
         <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="496,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Search" HorizontalAlignment="Left" Margin="642,30,0,0" VerticalAlignment="Top" Click="Search_Click"/>
+        <Button Content="Refresh table" HorizontalAlignment="Left" Margin="6,369,0,0" VerticalAlignment="Top" Click="Refresh_Click"/>
+        <TextBox x:Name="searchBox1" HorizontalAlignment="Left" Margin="7,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="searchBox2" HorizontalAlignment="Left" Margin="156,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Search quantity" HorizontalAlignment="Left" Margin="295,30,0,0" VerticalAlignment="Top" Click="Search_Quantity_Click"/>
+
 
     </Grid>
 </Window>

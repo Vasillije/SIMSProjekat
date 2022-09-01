@@ -1,15 +1,5 @@
 [
   {
-    "Jmbg": "p",
-    "Email": "p",
-    "Password": "pp",
-    "Name": "p",
-    "LastName": "p",
-    "PhoneNumber": "p",
-    "TypeUser": 0,
-    "IsBlocked": false
-  },
-  {
     "Jmbg": "u",
     "Email": "u",
     "Password": "u",
@@ -20,33 +10,13 @@
     "IsBlocked": false
   },
   {
-    "Jmbg": "f",
-    "Email": "f",
-    "Password": "f",
-    "Name": "f",
-    "LastName": "f",
-    "PhoneNumber": "f",
+    "Jmbg": "123",
+    "Email": "p",
+    "Password": "pp",
+    "Name": "p",
+    "LastName": "p",
+    "PhoneNumber": "p",
     "TypeUser": 0,
-    "IsBlocked": false
-  },
-  {
-    "Jmbg": "p1",
-    "Email": "pharmacist1@gmail.com",
-    "Password": "pharmacist1",
-    "Name": "pharmacist1",
-    "LastName": "pharmacist1",
-    "PhoneNumber": "+38161",
-    "TypeUser": 0,
-    "IsBlocked": false
-  },
-  {
-    "Jmbg": "d1",
-    "Email": "doctor1@gmail.com",
-    "Password": "doctor1",
-    "Name": "doctor1",
-    "LastName": "doctor1",
-    "PhoneNumber": "+38161",
-    "TypeUser": 1,
     "IsBlocked": false
   },
   {
@@ -60,33 +30,33 @@
     "IsBlocked": false
   },
   {
-    "Jmbg": "u1",
-    "Email": "upravnik1@gmail.com",
-    "Password": "upravnik1",
-    "Name": "upravnik1",
-    "LastName": "upravnik1",
-    "PhoneNumber": "+38161",
-    "TypeUser": 2,
-    "IsBlocked": false
-  },
-  {
-    "Jmbg": "u2",
-    "Email": "upravnik2@gmail.com",
-    "Password": "upravnik2",
-    "Name": "upravnik2",
-    "LastName": "upravnik2",
-    "PhoneNumber": "+38162",
-    "TypeUser": 2,
-    "IsBlocked": false
-  },
-  {
-    "Jmbg": "89098790",
-    "Email": "uu",
-    "Password": "h",
-    "Name": "hggggg",
-    "LastName": "hhhh",
-    "PhoneNumber": "hhhh",
+    "Jmbg": "1234",
+    "Email": "p1",
+    "Password": "pp",
+    "Name": "p",
+    "LastName": "p",
+    "PhoneNumber": "p",
     "TypeUser": 0,
     "IsBlocked": false
+  },
+  {
+    "Jmbg": "www",
+    "Email": "w1",
+    "Password": "w",
+    "Name": "w",
+    "LastName": "w",
+    "PhoneNumber": "w",
+    "TypeUser": 1,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "s",
+    "Email": "s",
+    "Password": "s",
+    "Name": "s",
+    "LastName": "s",
+    "PhoneNumber": "s",
+    "TypeUser": 0,
+    "IsBlocked": true
   }
 ]

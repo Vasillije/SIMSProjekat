@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamicExpresso;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace VasilijeSIMS.Service
     {
         public List<Medicine> medicines = new List<Medicine>();
         public MedicineRepository medicineRepository = new MedicineRepository();
+        public Ingredient ingredient;
         public bool DeleteMedicine(Medicine medicine)
         {
             medicines = medicineRepository.ReadFromFile();
@@ -45,7 +47,7 @@ namespace VasilijeSIMS.Service
             medicines = medicineRepository.ReadFromFile();
             foreach (Medicine i in medicines)
             {
-                if (i.Id.Equals(newM.Id) && i.IngredientV.Name.Equals(newM.IngredientV.Name))
+                if (i.Id.Equals(newM.Id) )
                 {
                     MessageBox.Show("This medicine already exists");
                     return false;
@@ -135,7 +137,7 @@ namespace VasilijeSIMS.Service
             return false;
         }
 
-        public List<Medicine> SearchAccepted(string search)
+        public List<Medicine> SearchAccepted(string search/*, string from, string to*/)
         {
             string tekst = search.ToLower();
             List<Medicine> foundMedicines = new List<Medicine>();
@@ -143,6 +145,37 @@ namespace VasilijeSIMS.Service
             foreach (Medicine i in medicines)
             {
                 if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                {
+                    foundMedicines.Add(i);
+                }
+                else if (i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                {
+                    var variables = tekst.Split(new[] { "(", "||", "&&", ")", " " }, StringSplitOptions.RemoveEmptyEntries);
+
+                    var interpreter = new Interpreter();
+
+                    foreach (var variable in variables)
+                    {
+                        interpreter.SetVariable(variable, ingredient.Name.Contains(variable));
+                    }
+                    if ((bool)interpreter.Eval(tekst))
+                    {
+                        foundMedicines.Add(i);
+                    }
+                }
+            }
+            return foundMedicines;
+        }
+
+        public List<Medicine> SearchAcceptedQuantity(string from, string to)
+        {
+            string tekst1 = from.ToLower();
+            string tekst2 = to.ToLower();
+            List<Medicine> foundMedicines = new List<Medicine>();
+            List<Medicine> medicines = medicineRepository.GetAceppted();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Quantity <= Int32.Parse(to) && i.Quantity >= Int32.Parse(from))
                 {
                     foundMedicines.Add(i);
                 }
@@ -165,6 +198,24 @@ namespace VasilijeSIMS.Service
             return foundMedicines;
         }
 
+        public List<Medicine> SearchDeclinedQuantity(string from, string to)
+        {
+            string text1 = from.ToLower();
+            string text2 = to.ToLower();
+            List<Medicine> medicines = medicineRepository.GetDeclined();
+            List<Medicine> foundMedicines = new List<Medicine>();
+            foreach (Medicine medicine in medicines)
+            {
+                if (medicine.Quantity >= Int32.Parse(from) && medicine.Quantity <= Int32.Parse(to))
+                {
+                    foundMedicines.Add(medicine);
+                }
+            }
+            return foundMedicines;
+        }
+
+
+
         public List<Medicine> SearchAwaiting(string search)
         {
             string tekst = search.ToLower();
@@ -172,7 +223,7 @@ namespace VasilijeSIMS.Service
             List<Medicine> foundMedicines = new List<Medicine>();
             foreach (Medicine i in medicines)
             {
-                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) )
                 {
                     foundMedicines.Add(i);
                 }
@@ -180,5 +231,20 @@ namespace VasilijeSIMS.Service
             return foundMedicines;
         }
 
+        public List<Medicine> SearchAwaitingQuantity(string from, string to)
+        {
+            string tekst1 = from.ToLower();
+            string tekst2 = to.ToLower();
+            List<Medicine> foundMedicines = new List<Medicine>();
+            List<Medicine> medicines = medicineRepository.GetAwaiting();
+            foreach (Medicine i in medicines)
+            {
+                if (i.Quantity <= Int32.Parse(to) && i.Quantity >= Int32.Parse(from))
+                {
+                    foundMedicines.Add(i);
+                }
+            }
+            return foundMedicines;
+        }
     }
 }

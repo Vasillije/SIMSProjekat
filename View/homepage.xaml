@@ -10,6 +10,5 @@
         <Button x:Name="users" Content="USERS" HorizontalAlignment="Left" Margin="30,31,0,0" BorderThickness="0" VerticalAlignment="Top" Height="38" Width="130" Click="Users_Click"/>
         <Button x:Name="logout" Content="Logout" HorizontalAlignment="Left" Margin="720,31,0,0" VerticalAlignment="Top" Click="Logout_Click"/>
         <Button x:Name="medicines" Content="MEDICINES" HorizontalAlignment="Left" Margin="160,31,0,0" VerticalAlignment="Top" BorderThickness="0" Height="38" Width="130" Click="Medicines_Click"/>
-        <Button x:Name="ingredients" Content="INGREDIENTS" HorizontalAlignment="Left" Margin="290,31,0,0" VerticalAlignment="Top" BorderThickness="0" Height="38" Width="130" Click="Ingredients_Click"/>
     </Grid>
 </Window>

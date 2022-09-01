@@ -80,13 +80,6 @@ namespace VasilijeSIMS.View
             Close();
         }
 
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-            medicines.Clear();
-            ObservableCollection<Medicine> help;
-            help = new ObservableCollection<Medicine>(medicineService.SearchAccepted(searchBox.Text));
-            MedicineTable.ItemsSource = help;
-        }
         private void Create_Click(object sender, RoutedEventArgs e)
         {
             var s = new AddMedicineView();
@@ -145,6 +138,22 @@ namespace VasilijeSIMS.View
             MedicineTable.ItemsSource = null;
             medicines = new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
             MedicineTable.ItemsSource = Check(medicines);
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchAccepted(searchBox.Text/*, searchBox1.Text, searchBox2.Text*/));
+            MedicineTable.ItemsSource = help;
+        }
+
+        private void Search_Quantity_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchAcceptedQuantity(searchBox1.Text, searchBox2.Text));
+            MedicineTable.ItemsSource = help;
         }
     }
 }

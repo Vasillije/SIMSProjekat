@@ -125,5 +125,20 @@ namespace VasilijeSIMS.View
             help = new ObservableCollection<Medicine>(medicineService.SearchAwaiting(searchBox.Text));
             AwaitingMedicineTable.ItemsSource = help;
         }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            AwaitingMedicineTable.ItemsSource = null;
+            medicines = new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
+            AwaitingMedicineTable.ItemsSource = Check(medicines);
+        }
+
+        private void Search_Quantity_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchAwaitingQuantity(searchBox2.Text, searchBox1.Text));
+            AwaitingMedicineTable.ItemsSource = help;
+        }
     }
 }

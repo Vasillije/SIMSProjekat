@@ -57,11 +57,6 @@ namespace VasilijeSIMS.View
             Close();
         }
 
-        private void Ingredients_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Medicines_Click(object sender, RoutedEventArgs e)
         {
             var s = new MedicineView();

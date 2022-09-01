@@ -36,7 +36,7 @@ namespace VasilijeSIMS.View
 
         public bool validation()
         {
-            if (id.Text == null || name.Text == null || manufacturer.Text == null || quantity.Text == null)
+            if (id.Text == "" || name.Text == "" || manufacturer.Text == "" || quantity.Text == "")
             {
                 MessageBox.Show("you must fill in all fields");
                 return false;
@@ -72,14 +72,19 @@ namespace VasilijeSIMS.View
                 ingredientsDictionary.Add( i.Name + "key", i);
                 
             }
-        
+
 
             if (validation() == true /*&& quantityValidation()==true*/)
             {
-                
-                
-                Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse( quantity.Text), ingredientsDictionary);
+
+
+                Medicine newMedicine = new Medicine(id.Text, name.Text, manufacturer.Text, Int32.Parse(quantity.Text), ingredientsDictionary);
                 medicineController.CreateMedicine(newMedicine);
+
+            }
+            else
+            {
+                MessageBox.Show("same id");
             }
             Close();
         }

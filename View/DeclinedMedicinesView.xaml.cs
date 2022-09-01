@@ -87,5 +87,20 @@ namespace VasilijeSIMS.View
         {
 
         }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            MedicineTable.ItemsSource = null;
+            medicines = new ObservableCollection<Medicine>(medicineRepository.ReadFromFile());
+            MedicineTable.ItemsSource = Check(medicines);
+        }
+
+        private void Search_Quantity_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchDeclinedQuantity(searchBox1.Text, searchBox2.Text));
+            MedicineTable.ItemsSource = help;
+        }
     }
 }
