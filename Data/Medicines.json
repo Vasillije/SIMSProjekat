@@ -6,7 +6,7 @@
     "Quantity": 5,
     "ingredientDictionary": {
       "antibiotik2key": {
-        "Name": "antibiotik2",
+        "Name": "bolovi",
         "Description": "fffffff",
         "IsChecked": true
       },
@@ -37,7 +37,7 @@
         "IsChecked": true
       },
       "antibiotik3key": {
-        "Name": "antibiotik3",
+        "Name": "anestezija",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -63,12 +63,12 @@
         "IsChecked": true
       },
       "antibiotik2key": {
-        "Name": "antibiotik2",
+        "Name": "bolovi",
         "Description": "fffffff",
         "IsChecked": true
       },
       "antibiotik4key": {
-        "Name": "antibiotik4",
+        "Name": "analgetik",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -98,7 +98,7 @@
     "Quantity": 6,
     "ingredientDictionary": {
       "antibiotik2key": {
-        "Name": "antibiotik2",
+        "Name": "bolovi",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -128,12 +128,12 @@
     "Quantity": 9,
     "ingredientDictionary": {
       "antibiotik3key": {
-        "Name": "antibiotik3",
+        "Name": "anestezija",
         "Description": "fffffff",
         "IsChecked": true
       },
       "antibiotik4key": {
-        "Name": "antibiotik4",
+        "Name": "analgetik",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -179,7 +179,7 @@
         "IsChecked": true
       },
       "antibiotik3key": {
-        "Name": "antibiotik3",
+        "Name": "anestezija",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -209,12 +209,12 @@
     "Quantity": 1,
     "ingredientDictionary": {
       "antibiotik2key": {
-        "Name": "antibiotik2",
+        "Name": "bolovi",
         "Description": "fffffff",
         "IsChecked": true
       },
       "antibiotik3key": {
-        "Name": "antibiotik3",
+        "Name": "anestezija",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -235,12 +235,12 @@
     "Quantity": 65,
     "ingredientDictionary": {
       "antibiotik2key": {
-        "Name": "antibiotik2",
+        "Name": "bolovi",
         "Description": "fffffff",
         "IsChecked": true
       },
       "antibiotik3key": {
-        "Name": "antibiotik3",
+        "Name": "anestezija",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -261,7 +261,7 @@
     "Quantity": 21,
     "ingredientDictionary": {
       "antibiotik4key": {
-        "Name": "antibiotik4",
+        "Name": "analgetik",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -282,7 +282,7 @@
     "Quantity": 11,
     "ingredientDictionary": {
       "antibiotik3key": {
-        "Name": "antibiotik3",
+        "Name": "anestezija",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -334,7 +334,7 @@
     "Quantity": 2,
     "ingredientDictionary": {
       "antibiotik2key": {
-        "Name": "antibiotik2",
+        "Name": "bolovi",
         "Description": "fffffff",
         "IsChecked": true
       }
@@ -355,12 +355,12 @@
     "Quantity": 20,
     "ingredientDictionary": {
       "antibiotik2key": {
-        "Name": "antibiotik2",
+        "Name": "bolovi",
         "Description": "fffffff",
         "IsChecked": true
       },
       "antibiotik4key": {
-        "Name": "antibiotik4",
+        "Name": "analgetik",
         "Description": "fffffff",
         "IsChecked": true
       }

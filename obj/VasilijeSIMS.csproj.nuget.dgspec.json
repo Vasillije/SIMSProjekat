@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS.csproj": {}
+    "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS\\VasilijeSIMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS.csproj": {
+    "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS\\VasilijeSIMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS.csproj",
+        "projectUniqueName": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS\\VasilijeSIMS.csproj",
         "projectName": "VasilijeSIMS",
-        "projectPath": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS.csproj",
+        "projectPath": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS\\VasilijeSIMS.csproj",
         "packagesPath": "C:\\Users\\Vasilije\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\obj\\",
+        "outputPath": "C:\\Users\\Vasilije\\Desktop\\SIMSProjekatGit\\VasilijeSIMS\\VasilijeSIMS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vasilije\\AppData\\Roaming\\NuGet\\NuGet.Config",

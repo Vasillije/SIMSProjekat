@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using VasilijeSIMS.Controller;
 using VasilijeSIMS.Model;
 using VasilijeSIMS.Repository;
+using VasilijeSIMS.Service;
 
 namespace VasilijeSIMS.View
 {
@@ -25,8 +26,10 @@ namespace VasilijeSIMS.View
     {
         
         public List<User> users = new List<User>();
+        public ObservableCollection<User> Users = new ObservableCollection<User>();
         public UserRepository userRepository = new UserRepository();
         public UserController userController = new UserController();
+        public UserService userService= new UserService();
 
         public UserView()
         {
@@ -118,8 +121,15 @@ namespace VasilijeSIMS.View
         {
             users.Clear();
             ObservableCollection<User> help;
-            help = new ObservableCollection<User>(userRepository.Search(searchBox.Text));
+            help = new ObservableCollection<User>(userService.Search(searchBox.Text));
             UsersTable.ItemsSource = help;
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            UsersTable.ItemsSource = null;
+            Users = new ObservableCollection<User>(userRepository.ReadFromFile());
+            UsersTable.ItemsSource = Users;
         }
     }
 }

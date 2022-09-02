@@ -58,5 +58,35 @@
     "PhoneNumber": "s",
     "TypeUser": 0,
     "IsBlocked": true
+  },
+  {
+    "Jmbg": "l",
+    "Email": "l",
+    "Password": "l",
+    "Name": "l",
+    "LastName": "l",
+    "PhoneNumber": "l",
+    "TypeUser": 1,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "m",
+    "Email": "m",
+    "Password": "m",
+    "Name": "m",
+    "LastName": "m",
+    "PhoneNumber": "m",
+    "TypeUser": 0,
+    "IsBlocked": false
+  },
+  {
+    "Jmbg": "b",
+    "Email": "b",
+    "Password": "b",
+    "Name": "b",
+    "LastName": "b",
+    "PhoneNumber": "b",
+    "TypeUser": 0,
+    "IsBlocked": true
   }
 ]

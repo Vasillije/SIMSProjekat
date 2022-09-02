@@ -41,6 +41,7 @@
         <TextBox x:Name="searchBox1" HorizontalAlignment="Left" Margin="7,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="searchBox2" HorizontalAlignment="Left" Margin="156,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Search quantity" HorizontalAlignment="Left" Margin="295,30,0,0" VerticalAlignment="Top" Click="Search_Quantity_Click"/>
+        <Button Content="Search ingredient" HorizontalAlignment="Left" Margin="386,30,0,0" VerticalAlignment="Top" Click="Search_Ingredient_Click"/>
 
 
     </Grid>

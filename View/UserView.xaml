@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="User view" Height="450" Width="800">
     <Grid>
-        <!--<DataGrid x:Name="UserTable" Margin="5,68,35,75" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding users}"  > -->
         <DataGrid IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding users}" x:Name="UsersTable" Margin="5,68,35,75" SelectionChanged="UsersTable_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="JMBG" Width="*" Binding="{Binding Jmbg}"/>
@@ -26,5 +25,6 @@
         <Button Content="Block selected user" HorizontalAlignment="Left" Margin="8,30,0,0" VerticalAlignment="Top" Width="124" Click="Block_Click"/>
         <Button Content="Unblock selected user" HorizontalAlignment="Left" Margin="161,30,0,0" VerticalAlignment="Top" Width="124" Click="Unblock_Click"/>
         <Button Content="Search" HorizontalAlignment="Left" Margin="629,30,0,0" VerticalAlignment="Top" Width="64" Click="Search_Click"/>
+        <Button Content="Refresh table" HorizontalAlignment="Left" Margin="376,30,0,0" VerticalAlignment="Top" Width="78" Click="Refresh_Click"/>
     </Grid>
 </Window>

@@ -100,7 +100,7 @@ namespace VasilijeSIMS.View
             if (AwaitingMedicineTable.SelectedIndex != -1)
             {           
                 CurrentMedicine = (Medicine)AwaitingMedicineTable.SelectedItem;
-                medicineController.addToApprovedBy(CurrentMedicine,loggedUser);
+                medicineController.AddToApprovedBy(CurrentMedicine,loggedUser);
                 NewMedicine = CurrentMedicine;
                 if (checkIfApproved(CurrentMedicine) == true)
                 {
@@ -138,6 +138,14 @@ namespace VasilijeSIMS.View
             medicines.Clear();
             ObservableCollection<Medicine> help;
             help = new ObservableCollection<Medicine>(medicineService.SearchAwaitingQuantity(searchBox2.Text, searchBox1.Text));
+            AwaitingMedicineTable.ItemsSource = help;
+        }
+
+        private void Search_Ingredient_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchAwaitingIngredient(searchBox.Text));
             AwaitingMedicineTable.ItemsSource = help;
         }
     }

@@ -1,6 +1,7 @@
 ﻿using DynamicExpresso;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,11 +58,11 @@ namespace VasilijeSIMS.Service
             medicineRepository.LoadIntoFile(medicines);
             return true;
         }
-        public bool addToApprovedBy(Medicine medicine, User user)
+        public bool AddToApprovedBy(Medicine medicine, User user)
         {
             List<User> approved;
             Medicine newMedicine =medicine;
-            approved = medicineRepository.getApprovedBy(medicine);
+            approved = medicineRepository.GetApprovedBy(medicine);
             foreach (User i in approved)
             {
                 if (i.Jmbg.Equals(user.Jmbg))
@@ -93,18 +94,17 @@ namespace VasilijeSIMS.Service
         }
         public bool ThreePeopleCheck(Medicine medicine)
         {
-            if (medicineRepository.getApprovedBy(medicine).Count() >= 3)
+            if (medicineRepository.GetApprovedBy(medicine).Count() >= 3)
             { 
                 return true;
             }
-            return false;
-                 
+            return false;                
         }
         public bool ApprovedByPharmacistCheck(Medicine medicine)
         {
             List<User> approved = new List<User>();
             List<User> pharmacist = new List<User>();
-            approved = medicineRepository.getApprovedBy(medicine);
+            approved = medicineRepository.GetApprovedBy(medicine);
             foreach (User i in approved)
             {
                 if (i.TypeUser.Equals(UserType.Pharmacist))
@@ -122,7 +122,7 @@ namespace VasilijeSIMS.Service
         {
             List<User> approved = new List<User>();
             List<User> doctor = new List<User>();
-            approved = medicineRepository.getApprovedBy(medicine);
+            approved = medicineRepository.GetApprovedBy(medicine);
             foreach (User i in approved)
             {
                 if (i.TypeUser.Equals(UserType.Doctor))
@@ -137,31 +137,16 @@ namespace VasilijeSIMS.Service
             return false;
         }
 
-        public List<Medicine> SearchAccepted(string search/*, string from, string to*/)
+        public List<Medicine> SearchAccepted(string search)
         {
             string tekst = search.ToLower();
             List<Medicine> foundMedicines = new List<Medicine>();
             List<Medicine> medicines = medicineRepository.GetAceppted();
             foreach (Medicine i in medicines)
             {
-                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) )
                 {
                     foundMedicines.Add(i);
-                }
-                else if (i.IngredientV.Name.ToString().ToLower().Contains(tekst))
-                {
-                    var variables = tekst.Split(new[] { "(", "||", "&&", ")", " " }, StringSplitOptions.RemoveEmptyEntries);
-
-                    var interpreter = new Interpreter();
-
-                    foreach (var variable in variables)
-                    {
-                        interpreter.SetVariable(variable, ingredient.Name.Contains(variable));
-                    }
-                    if ((bool)interpreter.Eval(tekst))
-                    {
-                        foundMedicines.Add(i);
-                    }
                 }
             }
             return foundMedicines;
@@ -190,7 +175,7 @@ namespace VasilijeSIMS.Service
             List<Medicine> foundMedicines = new List<Medicine>();
             foreach (Medicine i in medicines)
             {
-                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) || i.IngredientV.Name.ToString().ToLower().Contains(tekst))
+                if (i.Id.ToLower().Contains(tekst) || i.Name.ToLower().Contains(tekst) || i.Manufacturer.ToLower().Contains(tekst) || i.Quantity.ToString().ToLower().Contains(tekst) )
                 {
                     foundMedicines.Add(i);
                 }
@@ -212,6 +197,125 @@ namespace VasilijeSIMS.Service
                 }
             }
             return foundMedicines;
+        }
+
+        public ObservableCollection<Medicine> SearchAcceptedIngredient(string tekst = "")
+        {
+           // if (tekst.Contains("&"))
+            //{ }
+            
+            string[] tekst1 = tekst.Split('|');
+            string[] koristiti;
+            string[] tekst2 = tekst.Split('&');
+            if (tekst1.Length >1)
+            {
+                koristiti = tekst1;
+            }
+            else 
+            {
+                koristiti = tekst2;
+            }
+
+                ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
+                foreach (Medicine medicine in medicineRepository.GetAceppted())
+                {
+                    bool found = false;
+                   
+
+                    foreach (KeyValuePair<string, Ingredient> pair in (medicine.ingredientDictionary))
+                    {
+                        if (found )
+                        {
+                            break;
+                        }
+                    if (koristiti == tekst1)
+                    {
+                        foreach (string t in tekst1)
+                        {
+                            if (pair.Value.Name.Trim().ToLower().Contains(t.Trim().ToLower()))
+                            {
+                                medicines.Add(medicine);
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (string t in tekst2)
+                        {
+                            if (pair.Value.Name.Trim().ToLower().Contains(t.Trim().ToLower()))
+                            {
+                                medicines.Add(medicine);
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    }
+
+                }
+                return medicines;
+            
+        }
+
+        public ObservableCollection<Medicine> SearchDeclinedIngredient(string tekst = "")
+        {
+            string[] tekst1 = tekst.Split('|');
+            ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
+            foreach (Medicine medicine in medicineRepository.GetDeclined())
+            {
+                bool found = false;
+
+                foreach (KeyValuePair<string, Ingredient> pair in (medicine.ingredientDictionary))
+                {
+                    if (found)
+                    {
+                        break;
+                    }
+
+                    foreach (string t in tekst1)
+                    {
+                        if (pair.Value.Name.Contains(t) || pair.Value.Name.ToLower().Contains(t.ToLower()) || pair.Value.Name.ToUpper().Contains(t.ToUpper()))
+                        {
+                            medicines.Add(medicine);
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            return medicines;
+        }
+
+        public ObservableCollection<Medicine> SearchAwaitingIngredient(string tekst = "")
+        {
+            string[] tekst1 = tekst.Split('|');
+            ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>();
+            foreach (Medicine medicine in medicineRepository.GetAwaiting())
+            {
+                bool found = false;
+
+                foreach (KeyValuePair<string, Ingredient> pair in (medicine.ingredientDictionary))
+                {
+                    if (found)
+                    {
+                        break;
+                    }
+
+                    foreach (string t in tekst1)
+                    {
+                        if (pair.Value.Name.Contains(t) || pair.Value.Name.ToLower().Contains(t.ToLower()) || pair.Value.Name.ToUpper().Contains(t.ToUpper()))
+                        {
+                            medicines.Add(medicine);
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            return medicines;
         }
 
 

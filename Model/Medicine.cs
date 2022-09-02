@@ -15,16 +15,13 @@ namespace VasilijeSIMS.Model
        
         public Dictionary<string, Ingredient> ingredientDictionary { get; set; }
       
-        public Ingredient IngredientV { get; set; }
+       
         public Boolean IsAccepted { get; set; }
         public Boolean WaitingForConfirmation { get; set; }
         public Boolean IsDeleted { get; set; }
         public User DeclinedBy { get; set; }
         public List<User> ApprovedBy { get; set; }
         public DateTime ProcurementDate { get; set; }
-
-
-
         public string ReasonForRejection { get; set; }
 
         public Medicine(string id, string name, string manufacturer, int quantity,Dictionary<string,Ingredient> IngredientDictionary)

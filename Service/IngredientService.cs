@@ -42,7 +42,6 @@ namespace VasilijeSIMS.Service
                 }
             }
             return false;
-        }
-       
-        }
+        }    
     }
+}

@@ -19,8 +19,6 @@ namespace VasilijeSIMS.Repository
             path = @"..\..\..\data\Medicines.json";
         }
 
-
-        //citanje iz fajla 
         public List<Medicine> ReadFromFile()
         {
             List<Medicine> medicines = new List<Medicine>();
@@ -34,7 +32,7 @@ namespace VasilijeSIMS.Repository
             }
             return medicines;
         }
-        //upisivanje u fajl
+
         public void LoadIntoFile(List<Medicine> medicines)
         {
             JsonSerializer Serializer = new JsonSerializer();
@@ -59,7 +57,7 @@ namespace VasilijeSIMS.Repository
             }
             return aceptedMedicines;
         }
-        public List<User> getApprovedBy(Medicine medicine)
+        public List<User> GetApprovedBy(Medicine medicine)
         {
             List<Medicine> medicines = ReadFromFile();
              foreach (Medicine i in medicines)
@@ -71,9 +69,6 @@ namespace VasilijeSIMS.Repository
             }
             return null;
         }
-       
-            
-        
 
         public List<Medicine> GetDeclined()
         {

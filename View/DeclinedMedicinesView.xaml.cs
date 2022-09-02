@@ -102,5 +102,13 @@ namespace VasilijeSIMS.View
             help = new ObservableCollection<Medicine>(medicineService.SearchDeclinedQuantity(searchBox1.Text, searchBox2.Text));
             MedicineTable.ItemsSource = help;
         }
+
+        private void Search_Ingredient_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchDeclinedIngredient(searchBox.Text));
+            MedicineTable.ItemsSource = help;
+        }
     }
 }

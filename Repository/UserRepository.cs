@@ -20,8 +20,6 @@ namespace VasilijeSIMS.Repository
             path = @"..\..\..\data\Users.json";
         }
 
-
-        //citanje iz fajla 
         public List<User> ReadFromFile()
         {
             List<User> users = new List<User>();
@@ -35,7 +33,7 @@ namespace VasilijeSIMS.Repository
             }
             return users;
         }
-        //upisivanje u fajl
+
         public void LoadIntoFile(List<User> users)
         {
             JsonSerializer Serializer = new JsonSerializer();
@@ -45,21 +43,6 @@ namespace VasilijeSIMS.Repository
             Serializer.Serialize(jWriter, users);
             jWriter.Close();
             writer.Close();
-        }
-
-        public List<User> Search (string search)
-        {
-            string tekst = search.ToLower();
-            List<User> users = ReadFromFile();
-            List<User> foundUsers = new List<User>();
-            foreach (User user in users)
-            {
-                if(user.Jmbg.ToLower().Contains(tekst) || user.Email.ToLower().Contains(tekst) || user.Name.ToLower().Contains(tekst) || user.LastName.ToLower().Contains(tekst) || user.PhoneNumber.ToLower().Contains(tekst))
-                {
-                    foundUsers.Add(user);
-                }
-            }
-        return foundUsers;
         }
     }
 }

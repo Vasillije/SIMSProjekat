@@ -30,9 +30,9 @@ namespace VasilijeSIMS.Controller
         {
             return medicineService.ApprovedByDoctorCheck(user);
         }
-        public bool? addToApprovedBy(Medicine m,User user)
+        public bool? AddToApprovedBy(Medicine m,User user)
         {
-            return medicineService.addToApprovedBy(m,user);
+            return medicineService.AddToApprovedBy(m,user);
         }
         public bool ThreePeopleCheck(Medicine m)
         {

@@ -18,8 +18,6 @@ namespace VasilijeSIMS.Repository
             path = @"..\..\..\data\Ingredients.json";
         }
 
-
-        //citanje iz fajla 
         public List<Ingredient> ReadFromFile()
         {
             List<Ingredient> Ingredients = new List<Ingredient>();
@@ -33,7 +31,7 @@ namespace VasilijeSIMS.Repository
             }
             return Ingredients;
         }
-        //upisivanje u fajl
+
         public void LoadIntoFile(List<Ingredient> ingredients)
         {
             JsonSerializer Serializer = new JsonSerializer();

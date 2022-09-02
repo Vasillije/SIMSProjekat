@@ -155,5 +155,13 @@ namespace VasilijeSIMS.View
             help = new ObservableCollection<Medicine>(medicineService.SearchAcceptedQuantity(searchBox1.Text, searchBox2.Text));
             MedicineTable.ItemsSource = help;
         }
+
+        private void Search_Ingredient_Click(object sender, RoutedEventArgs e)
+        {
+            medicines.Clear();
+            ObservableCollection<Medicine> help;
+            help = new ObservableCollection<Medicine>(medicineService.SearchAcceptedIngredient(searchBox.Text));
+            MedicineTable.ItemsSource = help;
+        }
     }
 }
