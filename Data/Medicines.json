@@ -1,97 +1,5 @@
 [
   {
-    "Id": "y",
-    "Name": "y",
-    "Manufacturer": "y",
-    "Quantity": 5,
-    "ingredientDictionary": {
-      "antibiotik2key": {
-        "Name": "bolovi",
-        "Description": "fffffff",
-        "IsChecked": true
-      },
-      "antibiotik3key": {
-        "Name": "antibiotik3",
-        "Description": "fffffff",
-        "IsChecked": true
-      }
-    },
-    "IngredientV": null,
-    "IsAccepted": true,
-    "WaitingForConfirmation": false,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": [],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": ""
-  },
-  {
-    "Id": "1",
-    "Name": "panklav",
-    "Manufacturer": "galenika",
-    "Quantity": 22,
-    "ingredientDictionary": {
-      "antibiotikkey": {
-        "Name": "antibiotik",
-        "Description": "fffffff",
-        "IsChecked": true
-      },
-      "antibiotik3key": {
-        "Name": "anestezija",
-        "Description": "fffffff",
-        "IsChecked": true
-      }
-    },
-    "IngredientV": null,
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": [],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "nije upotrebljiv"
-  },
-  {
-    "Id": "5",
-    "Name": "strepsils",
-    "Manufacturer": "BojanaLek",
-    "Quantity": 43,
-    "ingredientDictionary": {
-      "antibiotikkey": {
-        "Name": "antibiotik",
-        "Description": "fffffff",
-        "IsChecked": true
-      },
-      "antibiotik2key": {
-        "Name": "bolovi",
-        "Description": "fffffff",
-        "IsChecked": true
-      },
-      "antibiotik4key": {
-        "Name": "analgetik",
-        "Description": "fffffff",
-        "IsChecked": true
-      }
-    },
-    "IngredientV": null,
-    "IsAccepted": false,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true,
-    "DeclinedBy": {
-      "Jmbg": "123",
-      "Email": "p",
-      "Password": "pp",
-      "Name": "p",
-      "LastName": "p",
-      "PhoneNumber": "p",
-      "TypeUser": 0,
-      "IsBlocked": false
-    },
-    "ApprovedBy": [],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "sada"
-  },
-  {
     "Id": "s",
     "Name": "s",
     "Manufacturer": "s",
@@ -103,7 +11,6 @@
         "IsChecked": true
       }
     },
-    "IngredientV": null,
     "IsAccepted": false,
     "WaitingForConfirmation": false,
     "IsDeleted": true,
@@ -122,52 +29,6 @@
     "ReasonForRejection": "ne vallja"
   },
   {
-    "Id": "3",
-    "Name": "brufen",
-    "Manufacturer": "Apoteka Jankovic",
-    "Quantity": 9,
-    "ingredientDictionary": {
-      "antibiotik3key": {
-        "Name": "anestezija",
-        "Description": "fffffff",
-        "IsChecked": true
-      },
-      "antibiotik4key": {
-        "Name": "analgetik",
-        "Description": "fffffff",
-        "IsChecked": true
-      }
-    },
-    "IngredientV": null,
-    "IsAccepted": false,
-    "WaitingForConfirmation": false,
-    "IsDeleted": true,
-    "DeclinedBy": {
-      "Jmbg": "123",
-      "Email": "p",
-      "Password": "pp",
-      "Name": "p",
-      "LastName": "p",
-      "PhoneNumber": "p",
-      "TypeUser": 0,
-      "IsBlocked": false
-    },
-    "ApprovedBy": [
-      {
-        "Jmbg": "123",
-        "Email": "p",
-        "Password": "pp",
-        "Name": "p",
-        "LastName": "p",
-        "PhoneNumber": "p",
-        "TypeUser": 0,
-        "IsBlocked": false
-      }
-    ],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "neispravan"
-  },
-  {
     "Id": "10",
     "Name": "optimel",
     "Manufacturer": "sssr",
@@ -184,7 +45,6 @@
         "IsChecked": true
       }
     },
-    "IngredientV": null,
     "IsAccepted": false,
     "WaitingForConfirmation": false,
     "IsDeleted": true,
@@ -203,32 +63,6 @@
     "ReasonForRejection": "lose utice na spavanje"
   },
   {
-    "Id": "9",
-    "Name": "nixar",
-    "Manufacturer": "herbalife",
-    "Quantity": 1,
-    "ingredientDictionary": {
-      "antibiotik2key": {
-        "Name": "bolovi",
-        "Description": "fffffff",
-        "IsChecked": true
-      },
-      "antibiotik3key": {
-        "Name": "anestezija",
-        "Description": "fffffff",
-        "IsChecked": true
-      }
-    },
-    "IngredientV": null,
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": [],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "istekao rok"
-  },
-  {
     "Id": "4",
     "Name": "sebamed",
     "Manufacturer": "galenika",
@@ -245,7 +79,6 @@
         "IsChecked": true
       }
     },
-    "IngredientV": null,
     "IsAccepted": false,
     "WaitingForConfirmation": true,
     "IsDeleted": false,
@@ -266,7 +99,6 @@
         "IsChecked": true
       }
     },
-    "IngredientV": null,
     "IsAccepted": false,
     "WaitingForConfirmation": true,
     "IsDeleted": false,
@@ -287,7 +119,6 @@
         "IsChecked": true
       }
     },
-    "IngredientV": null,
     "IsAccepted": true,
     "WaitingForConfirmation": false,
     "IsDeleted": false,
@@ -328,27 +159,6 @@
     "ReasonForRejection": ""
   },
   {
-    "Id": "2",
-    "Name": "palitrex",
-    "Manufacturer": "hemofarm",
-    "Quantity": 2,
-    "ingredientDictionary": {
-      "antibiotik2key": {
-        "Name": "bolovi",
-        "Description": "fffffff",
-        "IsChecked": true
-      }
-    },
-    "IngredientV": null,
-    "IsAccepted": false,
-    "WaitingForConfirmation": true,
-    "IsDeleted": false,
-    "DeclinedBy": null,
-    "ApprovedBy": [],
-    "ProcurementDate": "0001-01-01T00:00:00",
-    "ReasonForRejection": "ne valja"
-  },
-  {
     "Id": "8",
     "Name": "brufen",
     "Manufacturer": "sssr",
@@ -365,7 +175,6 @@
         "IsChecked": true
       }
     },
-    "IngredientV": null,
     "IsAccepted": true,
     "WaitingForConfirmation": false,
     "IsDeleted": false,
@@ -373,5 +182,224 @@
     "ApprovedBy": [],
     "ProcurementDate": "2022-08-31T00:00:00+02:00",
     "ReasonForRejection": ""
+  },
+  {
+    "Id": "11",
+    "Name": "panadol ultra",
+    "Manufacturer": "vasilije",
+    "Quantity": 44,
+    "ingredientDictionary": {
+      "bolovikey": {
+        "Name": "bolovi",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "anestezijakey": {
+        "Name": "anestezija",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "y",
+    "Name": "y",
+    "Manufacturer": "y",
+    "Quantity": 15,
+    "ingredientDictionary": {
+      "antibiotik2key": {
+        "Name": "bolovi",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik3key": {
+        "Name": "antibiotik3",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "2022-09-02T00:00:00+02:00",
+    "ReasonForRejection": ""
+  },
+  {
+    "Id": "2",
+    "Name": "palitrex",
+    "Manufacturer": "hemofarm",
+    "Quantity": 2,
+    "ingredientDictionary": {
+      "antibiotik2key": {
+        "Name": "bolovi",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "123",
+      "Email": "p",
+      "Password": "pp",
+      "Name": "p",
+      "LastName": "p",
+      "PhoneNumber": "p",
+      "TypeUser": 0,
+      "IsBlocked": false
+    },
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "ne valja"
+  },
+  {
+    "Id": "3",
+    "Name": "brufen",
+    "Manufacturer": "Apoteka Jankovic",
+    "Quantity": 9,
+    "ingredientDictionary": {
+      "anestezijakey": {
+        "Name": "anestezija",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "analgetikkey": {
+        "Name": "analgetik",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "neispravan"
+  },
+  {
+    "Id": "9",
+    "Name": "nixar",
+    "Manufacturer": "herbalife",
+    "Quantity": 1,
+    "ingredientDictionary": {
+      "bolovikey": {
+        "Name": "bolovi",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "anestezijakey": {
+        "Name": "anestezija",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": true,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "istekao rok"
+  },
+  {
+    "Id": "5",
+    "Name": "strepsils",
+    "Manufacturer": "BojanaLek",
+    "Quantity": 43,
+    "ingredientDictionary": {
+      "antibiotikkey": {
+        "Name": "antibiotik",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "analgetikkey": {
+        "Name": "analgetik",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IsAccepted": false,
+    "WaitingForConfirmation": false,
+    "IsDeleted": true,
+    "DeclinedBy": {
+      "Jmbg": "123",
+      "Email": "p",
+      "Password": "pp",
+      "Name": "p",
+      "LastName": "p",
+      "PhoneNumber": "p",
+      "TypeUser": 0,
+      "IsBlocked": false
+    },
+    "ApprovedBy": [],
+    "ProcurementDate": "0001-01-01T00:00:00",
+    "ReasonForRejection": "sada"
+  },
+  {
+    "Id": "1",
+    "Name": "panklav",
+    "Manufacturer": "galenika",
+    "Quantity": 23,
+    "ingredientDictionary": {
+      "antibiotikkey": {
+        "Name": "antibiotik",
+        "Description": "fffffff",
+        "IsChecked": true
+      },
+      "antibiotik3key": {
+        "Name": "anestezija",
+        "Description": "fffffff",
+        "IsChecked": true
+      }
+    },
+    "IsAccepted": true,
+    "WaitingForConfirmation": false,
+    "IsDeleted": false,
+    "DeclinedBy": null,
+    "ApprovedBy": [
+      {
+        "Jmbg": "123",
+        "Email": "p",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "1234",
+        "Email": "p1",
+        "Password": "pp",
+        "Name": "p",
+        "LastName": "p",
+        "PhoneNumber": "p",
+        "TypeUser": 0,
+        "IsBlocked": false
+      },
+      {
+        "Jmbg": "w",
+        "Email": "w",
+        "Password": "w",
+        "Name": "w",
+        "LastName": "w",
+        "PhoneNumber": "w",
+        "TypeUser": 1,
+        "IsBlocked": false
+      }
+    ],
+    "ProcurementDate": "2022-09-24T00:00:00",
+    "ReasonForRejection": "nije upotrebljiv"
   }
 ]

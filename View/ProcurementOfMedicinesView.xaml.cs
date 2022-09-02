@@ -41,7 +41,7 @@ namespace VasilijeSIMS.View
             currentAmount.Content=medicine.Quantity;
             currentMedicine=medicine;
             DatePicker.SelectedDate = DateTime.Now.Date;
-            timerInit();
+           // timerInit();
         }
         
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -52,7 +52,11 @@ namespace VasilijeSIMS.View
         private  void timerInit()
         {
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(30);
+            timer.Interval = TimeSpan.FromSeconds(40);
+            
+           //timer.Interval = (procurementDate - DateTime.Now); 
+           //MessageBox.Show(timer.Interval.TotalMinutes.ToString());
+          // MessageBox.Show(timer.Interval.TotalHours.ToString());
             timer.Start();
             timer.Tick += new EventHandler(timerTick);
         }

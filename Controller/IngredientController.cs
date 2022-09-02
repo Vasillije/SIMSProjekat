@@ -11,7 +11,6 @@ namespace VasilijeSIMS.Controller
 {
     internal class IngredientController
     {
-        IngredientRepository ingredientRepository = new IngredientRepository();
         IngredientService ingredientService = new IngredientService();
         public bool UpdateMIngredient(Ingredient ingredient, Ingredient ingredientNew)
         {

@@ -12,7 +12,6 @@ namespace VasilijeSIMS.Controller
 {
     public class MedicineController
     {
-        MedicineRepository medicineRepository = new MedicineRepository();
         MedicineService medicineService = new MedicineService();
         public bool DeleteMedicine(Medicine medicine)
         {

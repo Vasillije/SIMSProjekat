@@ -83,10 +83,10 @@
     "Jmbg": "b",
     "Email": "b",
     "Password": "b",
-    "Name": "b",
+    "Name": "branko",
     "LastName": "b",
     "PhoneNumber": "b",
     "TypeUser": 0,
-    "IsBlocked": true
+    "IsBlocked": false
   }
 ]

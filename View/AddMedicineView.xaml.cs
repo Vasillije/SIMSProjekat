@@ -44,20 +44,6 @@ namespace VasilijeSIMS.View
             return true;
         }
 
-        //public bool quantityValidation()
-        //{
-        //    byte[] asciiBytes = Encoding.ASCII.GetBytes(quantity.Text);
-        //    for (int i = 0;i< asciiBytes.Length;i++)
-        //        {
-        //        if (asciiBytes[i] >= 48 && asciiBytes[i] <= 57)
-        //        {
-        //            MessageBox.Show("quantity must be a number");
-        //            return false;
-        //        }
-        //        }
-        //    return true;   
-        //}
-
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
@@ -74,7 +60,7 @@ namespace VasilijeSIMS.View
             }
 
 
-            if (validation() == true /*&& quantityValidation()==true*/)
+            if (validation() == true)
             {
 
 

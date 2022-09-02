@@ -85,7 +85,7 @@ namespace VasilijeSIMS.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VasilijeSIMS;V1.0.0.0;component/view/awaitingconformationview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VasilijeSIMS;component/view/awaitingconformationview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\AwaitingConformationView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

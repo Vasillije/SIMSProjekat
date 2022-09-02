@@ -11,8 +11,6 @@ namespace VasilijeSIMS.Controller
 {
     public class UserController
     {
-
-        UserRepository userRepository=new UserRepository();
         UserService userService =new UserService();
 
         public bool CreateUser(User user)
